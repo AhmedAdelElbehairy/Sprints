@@ -70,23 +70,23 @@ void start(void)
 
         printf("use the numpad to select the location\n");
 
-        while((check_Win_situation()==NoWinner) &&(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' ||\
-                                                   pointer_To_Our_Board->UR==' ' || pointer_To_Our_Board->ML==' ' ||\
-                                                   pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
-                                                   pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' ||\
-                                                   pointer_To_Our_Board->BR==' '))
+        while((check_Win_situation()==NoWinner))
         {
-
-            while(player_turn(mode,"USER2")==-1);
+            if(!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+                pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '))
+                    break;
+            while(player_turn(mode,"USER2")==-1&&(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+                pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '));
             Print_The_Board();
-
-
-
-            while(player_turn(mode,"USER1")==-1);
+            while(player_turn(mode,"USER1")==-1&&(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+                pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '));
             Print_The_Board();
 
         }
-        Print_The_Board();
+//        Print_The_Board();
     }
     }
 

@@ -21,6 +21,7 @@ int main()
         gets((char*)word);
         uint8_t* characters=balancedParentheses((uint8_t*)word);
         printf("%s\n",characters);
+		getch();
     #endif
     return 0;
 

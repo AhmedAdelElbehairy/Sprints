@@ -34,6 +34,7 @@ int main()
         system("cls");
         uint8_t x=binarySearch(arr,i,num);
         printf("index of element you searching for is %d\n",x);
+		getch();
     #endif // Unit_Testing
     return 0;
 }

@@ -14,6 +14,9 @@ int main()
     UnitTestingFrameWork();
     #else
     start();
+    printf("\npress enter to continue");
+    getch();
+    system("cls");
     #endif // Unit_Testing
     return 0;
 }

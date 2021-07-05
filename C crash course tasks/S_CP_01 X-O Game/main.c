@@ -18,6 +18,7 @@ int main()
         system("cls");
         int x =0;
         start();
+        system("cls");
         printf("if you want to play again press 1 or press 2 to terminate\n");
         x=getch()-48;
         if(x==1)

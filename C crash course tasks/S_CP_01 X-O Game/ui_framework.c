@@ -23,7 +23,9 @@ int player_turn (gamemode mode,char* user)
     int empty;
     int pressed_value=getch()-48;
     empty=check_The_Location(pointer_To_Our_Board,pressed_value);
-    if(empty==0)
+    if(empty==0 && (pressed_value==1 ||pressed_value==2||\
+                    pressed_value==3||pressed_value==4||pressed_value==5||\
+                    pressed_value==9||pressed_value==7||pressed_value==6||pressed_value==8))
         Update_The_Board(pointer_To_Our_Board, pressed_value, user);
     else
         pressed_value=-1;
@@ -49,7 +51,9 @@ gamemode modeselection(void)
 }
 void start(void)
 {
+    reset_Tic_tac();
     gamemode mode=modeselection();
+    int playerselection=0;
     int flag=0;
     while(!(mode==single_player || mode==multi_player))
         mode=modeselection();
@@ -67,7 +71,9 @@ void start(void)
         printf("use the numpad to select the location\n");
         while(check_Win_situation()==NoWinner)
         {
-            player_turn(mode,"USER1");
+            playerselection=player_turn(mode,"USER1");
+            if(playerselection==-1)
+                continue;
             Print_The_Board();
             if(!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
                 pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\

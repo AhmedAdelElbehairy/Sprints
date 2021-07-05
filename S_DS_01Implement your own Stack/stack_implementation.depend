@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1625406698 source:c:\users\zoldeyck\desktop\cpp\stack_implementation\stackdriver.c
+	<stdio.h>
+	<stdlib.h>
+	"typedefs.h"
+	"linkedlistdriver.h"
+	"stackdriver.h"
+
+1625337183 source:c:\users\zoldeyck\desktop\cpp\stack_implementation\stackframework.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"typedefs.h"
+	"linkedlistdriver.h"
+	"stackdriver.h"
+	"stackframework.h"
+
+1625433470 source:c:\users\zoldeyck\desktop\cpp\stack_implementation\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"typedefs.h"
+	"linkedlistdriver.h"
+	"stackdriver.h"
+	"stackframework.h"
+
+1625239208 c:\users\zoldeyck\desktop\cpp\stack_implementation\typedefs.h
+
+1625407572 c:\users\zoldeyck\desktop\cpp\stack_implementation\linkedlistdriver.h
+
+1625430053 source:c:\users\zoldeyck\desktop\cpp\stack_implementation\linkedlistdriver.c
+	<stdio.h>
+	<stdlib.h>
+	"typedefs.h"
+	"linkedlistdriver.h"
+
+1625407572 c:\users\zoldeyck\desktop\cpp\stack_implementation\stackdriver.h
+
+1625327939 c:\users\zoldeyck\desktop\cpp\stack_implementation\stackframework.h
+

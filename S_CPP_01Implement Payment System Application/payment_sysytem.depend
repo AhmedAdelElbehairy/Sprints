@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1625350301 source:c:\users\zoldeyck\desktop\cpp\payment_sysytem\basictools.c
+	<stdio.h>
+	<stdlib.h>
+	"typedefs.h"
+	"basictools.h"
+
+1625382796 source:c:\users\zoldeyck\desktop\cpp\payment_sysytem\cardandterminal.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"typedefs.h"
+	"cardandterminal.h"
+
+1625239208 c:\users\zoldeyck\desktop\cpp\payment_sysytem\typedefs.h
+
+1625383449 source:c:\users\zoldeyck\desktop\cpp\payment_sysytem\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"typedefs.h"
+	"basictools.h"
+	"cardandterminal.h"
+	"server.h"
+	"transaction.h"
+
+1625383431 source:c:\users\zoldeyck\desktop\cpp\payment_sysytem\transaction.c
+	<stdio.h>
+	<stdlib.h>
+	"typedefs.h"
+	"cardandterminal.h"
+	"server.h"
+	"transaction.h"
+
+1625344412 c:\users\zoldeyck\desktop\cpp\payment_sysytem\cardandterminal.h
+
+1625350248 c:\users\zoldeyck\desktop\cpp\payment_sysytem\basictools.h
+
+1625383768 source:c:\users\zoldeyck\desktop\cpp\payment_sysytem\server.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"typedefs.h"
+	"basictools.h"
+	"server.h"
+
+1625383431 c:\users\zoldeyck\desktop\cpp\payment_sysytem\server.h
+
+1625383742 c:\users\zoldeyck\desktop\cpp\payment_sysytem\transaction.h
+
+1625468368 source:c:\users\zoldeyck\desktop\cpp\payment_system\cardandterminal.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"typedefs.h"
+	"cardandterminal.h"
+
+1625239208 c:\users\zoldeyck\desktop\cpp\payment_system\typedefs.h
+
+1625426917 c:\users\zoldeyck\desktop\cpp\payment_system\cardandterminal.h
+
+1625469459 source:c:\users\zoldeyck\desktop\cpp\payment_system\server.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"typedefs.h"
+	"server.h"
+
+1625426917 c:\users\zoldeyck\desktop\cpp\payment_system\server.h
+
+1625468551 source:c:\users\zoldeyck\desktop\cpp\payment_system\transaction.c
+	<stdio.h>
+	<stdlib.h>
+	"typedefs.h"
+	"cardandterminal.h"
+	"server.h"
+	"transaction.h"
+
+1625427005 c:\users\zoldeyck\desktop\cpp\payment_system\transaction.h
+
+1625469111 source:c:\users\zoldeyck\desktop\cpp\payment_system\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"typedefs.h"
+	"cardandterminal.h"
+	"server.h"
+	"transaction.h"
+

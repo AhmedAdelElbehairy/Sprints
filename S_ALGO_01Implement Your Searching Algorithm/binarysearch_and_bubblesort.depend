@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1625416935 source:c:\users\zoldeyck\desktop\cpp\binarysearch_and_bubblesort\binarysearch.c
+	<stdio.h>
+	<stdlib.h>
+	"typedefs.h"
+	"BubbleSort.h"
+	"BinarySearch.h"
+
+1625259105 source:c:\users\zoldeyck\desktop\cpp\binarysearch_and_bubblesort\bubblesort.c
+	<stdio.h>
+	<stdlib.h>
+	"typedefs.h"
+	"BubbleSort.h"
+
+1625239208 c:\users\zoldeyck\desktop\cpp\binarysearch_and_bubblesort\typedefs.h
+
+1625258909 c:\users\zoldeyck\desktop\cpp\binarysearch_and_bubblesort\bubblesort.h
+
+1625414885 c:\users\zoldeyck\desktop\cpp\binarysearch_and_bubblesort\binarysearch.h
+
+1625423295 source:c:\users\zoldeyck\desktop\cpp\binarysearch_and_bubblesort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"typedefs.h"
+	"BubbleSort.h"
+	"BinarySearch.h"
+

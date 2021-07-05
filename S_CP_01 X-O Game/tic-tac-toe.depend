@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1625210081 source:c:\users\zoldeyck\desktop\cpp\tic-tac-toe\ui_driver.c
+	<stdio.h>
+	<stdlib.h>
+	"ui_driver.h"
+
+1625164908 source:c:\users\zoldeyck\desktop\cpp\tic-tac-toe\ui_framework.c
+
+1625209672 source:c:\users\zoldeyck\desktop\cpp\tic-tac-toe\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"ui_driver.h"
+
+1625208214 c:\users\zoldeyck\desktop\cpp\tic-tac-toe\ui_driver.h
+
+1625470537 source:c:\users\zoldeyck\desktop\cpp\tic-tac-toe-tic\ui_framework.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	"ui_driver.h"
+	"ui_framework.h"
+
+1625475000 source:c:\users\zoldeyck\desktop\cpp\tic-tac-toe-tic\ui_driver.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<time.h>
+	"ui_driver.h"
+
+1625471981 c:\users\zoldeyck\desktop\cpp\tic-tac-toe-tic\ui_driver.h
+
+1625471981 source:c:\users\zoldeyck\desktop\cpp\tic-tac-toe-tic\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"ui_driver.h"
+	"ui_framework.h"
+
+1625470537 c:\users\zoldeyck\desktop\cpp\tic-tac-toe-tic\ui_framework.h
+

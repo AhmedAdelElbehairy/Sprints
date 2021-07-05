@@ -193,7 +193,7 @@ winner check_Win_situation(void)
        ((ptr->UL==ptr->MC) && (ptr->MC==ptr->BR) && (ptr->UL!=' ')) ||\
        ((ptr->UR==ptr->MC) && (ptr->MC==ptr->BL) && (ptr->UR!=' ')))
         {
-            printf("we have a winner\n");
+            //printf("we have a winner\n");
             stat=Winner;
         }
 

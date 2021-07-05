@@ -68,9 +68,26 @@ void start(void)
         while(check_Win_situation()==NoWinner)
         {
             player_turn(mode,"USER1");
+            Print_The_Board();
+            if(!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+                pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '))
+                    break;
             computer_turn();
             Print_The_Board();
+
         }
+        if(check_Win_situation()==Winner)
+        {
+            printf("we have a winner\n");
+        }
+        else if(!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+                pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' ')&&(check_Win_situation()==NoWinner))
+        {
+            printf("there is no winners\n");
+        }
+
     }
     else//multiplayer mode
     {
@@ -88,12 +105,30 @@ void start(void)
                 pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
                 pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' ')&&(check_Win_situation()==NoWinner));
             Print_The_Board();
+            if(!(check_Win_situation()==NoWinner)||!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+                pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '))
+                break;
             while(player_turn(mode,"USER1")==-1&&(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
                 pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
                 pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' ')&&(check_Win_situation()==NoWinner));
             Print_The_Board();
+            if(!(check_Win_situation()==NoWinner)||!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+                pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '))
+                break;
 
         }
+        if(!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+                pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' ')&&(check_Win_situation()==NoWinner))
+                {
+                    printf("there is no winners\n");
+                }
+                else
+                {
+                    printf("we have a winner\n");
+                }
 //        Print_The_Board();
     }
     }

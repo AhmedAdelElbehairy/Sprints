@@ -8,6 +8,7 @@
 
 int main()
 {
+    //edit config files to run the unit tests
     #if Unit_Testing
         UnitTestBubbleSort();
         UnitTestBinarySearch();

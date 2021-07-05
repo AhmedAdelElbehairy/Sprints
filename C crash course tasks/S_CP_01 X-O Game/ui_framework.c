@@ -55,6 +55,14 @@ void start(void)
         mode=modeselection();
     if (mode==single_player)
     {
+        if(!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
+             pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
+             pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '))
+                {
+                    Print_The_Board();
+                    return;
+                }
+
         Print_The_Board();
         printf("use the numpad to select the location\n");
         while(check_Win_situation()==NoWinner)
@@ -64,7 +72,7 @@ void start(void)
             Print_The_Board();
         }
     }
-    else
+    else//multiplayer mode
     {
         Print_The_Board();
 
@@ -78,19 +86,17 @@ void start(void)
                     break;
             while(player_turn(mode,"USER2")==-1&&(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
                 pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
-                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '));
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' ')&&(check_Win_situation()==NoWinner));
             Print_The_Board();
             while(player_turn(mode,"USER1")==-1&&(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
                 pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
-                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' '));
+                pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' ')&&(check_Win_situation()==NoWinner));
             Print_The_Board();
 
         }
 //        Print_The_Board();
     }
     }
-
-
 void UnitTestingFrameWork(void)
 {
     printf("start unit testing for functions of UIframeWork:\n");

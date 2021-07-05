@@ -6,4 +6,5 @@
     isEmpty isStackEmpty(void);
     void pullWithNoReturn(void);
     void empty_the_stack(void);
+    void UnitTestStackDriver(void);
 #endif // STACKDRIVER_H

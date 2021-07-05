@@ -19,4 +19,6 @@ void Delete(struct Node** head, uint32_t index);
 
 void print(struct Node* head);
 
+void UnitTestLinkedListDriver(void);
+
 #endif // LINKEDLISTDRIVER_H

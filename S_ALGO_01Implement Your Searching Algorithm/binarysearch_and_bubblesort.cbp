@@ -39,6 +39,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="BubbleSort.h" />
+		<Unit filename="config.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

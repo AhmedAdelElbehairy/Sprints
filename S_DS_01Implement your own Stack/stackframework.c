@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "config.h"
 #include"typedefs.h"
 #include "linkedlistdriver.h"
 #include "stackdriver.h"
@@ -69,4 +70,24 @@ uint8_t* balancedParentheses (uint8_t* expression)
         empty_the_stack();
     }
     return returnword;
+}
+void UnitTestBalancedParantheses(void)
+{
+    printf("unit testing of stack framework:\n");
+    printf("1-testing balancedParentheses Function:\n");
+    uint8_t *balancedParentheses_test_cases_data[]={"{[()]}","{{(})}","{{{(())}}}","(()(()))","(()))("};
+    printf("\nexpected output:\n");
+    printf("Balanced\n");
+    printf("Not Balanced\n");
+    printf("Balanced\n");
+    printf("Balanced\n");
+    printf("Not Balanced\n");
+    printf("\nactual output:\n");
+    for(int i=0;i<5;i++)
+    {
+        printf("%s\n",balancedParentheses(balancedParentheses_test_cases_data[i]));
+    }
+    printf("\npress enter to continue");
+    getch();
+    system("cls");
 }

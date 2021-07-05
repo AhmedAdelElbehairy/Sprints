@@ -10,5 +10,6 @@ typedef enum
 }Sort;
 Sort SortedOrNot(uint32_t* arr, uint8_t numberOfelements);
 uint8_t binarySearch(uint32_t* arr, uint8_t numberOfelements, uint8_t number);
+void UnitTestBinarySearch();
 
 #endif // BINARYSEARCH_H

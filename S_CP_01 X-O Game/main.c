@@ -8,6 +8,7 @@
 
 int main()
 {
+    //edit config file to run the unit tests
     #if Unit_Testing
     UnitTestingDriver();
     UnitTestingFrameWork();

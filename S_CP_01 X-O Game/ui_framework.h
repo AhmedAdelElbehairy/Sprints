@@ -5,7 +5,7 @@
         multi_player
     }gamemode;
     void computer_turn (void);
-    void player_turn (gamemode mode,char* user);
+    int player_turn (gamemode mode,char* user);
     void start(void);
     void UnitTestingFrameWork(void);
 #endif // UI_FRAMEWORK_H

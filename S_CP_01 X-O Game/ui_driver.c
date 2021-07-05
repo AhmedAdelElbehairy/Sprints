@@ -3,6 +3,7 @@
 #include <string.h>
 #include <conio.h>
 #include <time.h>
+#include "config.h"
 #include "ui_driver.h"
 //global values
 Board Our_Board ={' ',' ',' ',\
@@ -25,7 +26,7 @@ void Print_The_Board(void)
 void Update_The_Board(Board *ptr, locations_of_board location, char* user)
 {
     char XORO;
-    if(user[0]=='PC')
+    if(user[0]=='P')
     {
         XORO='O';
     }
@@ -42,100 +43,142 @@ void Update_The_Board(Board *ptr, locations_of_board location, char* user)
         printf("wrong user entry to Update_The_Board function\n/n");
     }
 
+
+
     switch (location)
     {
         case UL:
-            ptr->UL=XORO;
+            if(ptr->UL==' ')
+                ptr->UL=XORO;
             break;
         case UC:
-            ptr->UC=XORO;
+            if(ptr->UC==' ')
+                ptr->UC=XORO;
             break;
         case UR:
-            ptr->UR=XORO;
+            if(ptr->UR==' ')
+                ptr->UR=XORO;
             break;
         case ML:
-            ptr->ML=XORO;
+            if(ptr->ML==' ')
+                ptr->ML=XORO;
             break;
         case MC:
-            ptr->MC=XORO;
+            if(ptr->MC==' ')
+                ptr->MC=XORO;
             break;
         case MR:
-            ptr->MR=XORO;
+            if(ptr->MR==' ')
+                ptr->MR=XORO;
             break;
         case BL:
-            ptr->BL=XORO;
+            if(ptr->BL==' ')
+                ptr->BL=XORO;
             break;
         case BC:
-            ptr->BC=XORO;
+            if(ptr->BC==' ')
+                ptr->BC=XORO;
             break;
         case BR:
-            ptr->BR=XORO;
+            if(ptr->BR==' ')
+                ptr->BR=XORO;
             break;
         default:
             printf("wrong location entry to Update_The_Board function\n");
     }
+
+
 }
-void check_The_Location(Board *ptr, locations_of_board location)
+int check_The_Location(Board *ptr, locations_of_board location)
 {
+    int empty=0;
     switch (location)
     {
         case UL:
             if(ptr->UL=='X' || ptr->UL=='O')
-                printf("this position is already filled\n");
+                {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         case UC:
             if(ptr->UC=='X' || ptr->UC=='O')
-                printf("this position is already filled\n");
+                {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         case UR:
             if(ptr->UR=='X' || ptr->UR=='O')
-                printf("this position is already filled\n");
+                {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         case ML:
             if(ptr->ML=='X' || ptr->ML=='O')
-                printf("this position is already filled\n");
+               {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         case MC:
             if(ptr->MC=='X' || ptr->MC=='O')
-                printf("this position is already filled\n");
+                {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         case MR:
             if(ptr->MR=='X' || ptr->MR=='O')
-                printf("this position is already filled\n");
+                {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         case BL:
             if(ptr->BL=='X' || ptr->BL=='O')
-                printf("this position is already filled\n");
+                {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         case BC:
             if(ptr->BC=='X' || ptr->BC=='O')
-                printf("this position is already filled\n");
+                {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         case BR:
             if(ptr->BR=='X' || ptr->BR=='O')
-                printf("this position is already filled\n");
+                {printf("this position is already filled\n");
+                empty=1;}
+            #if Unit_Testing
             else
                 printf("this position is empty\n");
+            #endif // Unit_Testing
             break;
         default:
             printf("this position isn't valid\n");
     }
+    return empty;
 }
 winner check_Win_situation(void)
 {
@@ -402,7 +445,10 @@ void UnitTestingDriver(void)
     {
         printf("no winning situation\n");
     }
-
+    reset_Tic_tac();
+    printf("\npress enter to continue");
+    getch();
+    system("cls");
 }
 
 

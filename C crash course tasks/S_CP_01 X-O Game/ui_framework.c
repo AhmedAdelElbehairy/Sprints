@@ -186,7 +186,7 @@ void UnitTestingFrameWork(void)
     system("cls");
     /*********************************************************************************************/
     printf("unit testing for functions of UIframeWork:\n");
-    printf("3-unit testing of play() functions\n");
+    printf("3-unit testing of start() functions\n");
     printf("this function is tested by playing\n");
     printf("function testing start:\n");
     start();

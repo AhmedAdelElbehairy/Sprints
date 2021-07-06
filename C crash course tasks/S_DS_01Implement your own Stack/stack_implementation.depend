@@ -38,3 +38,38 @@
 
 1625327939 c:\users\zoldeyck\desktop\cpp\stack_implementation\stackframework.h
 
+1625489717 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_ds_01implement your own stack\linkedlistdriver.c
+	<stdio.h>
+	<stdlib.h>
+	"config.h"
+	"typedefs.h"
+	"linkedlistdriver.h"
+
+1625489717 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_ds_01implement your own stack\config.h
+
+1625239208 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_ds_01implement your own stack\typedefs.h
+
+1625606600 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_ds_01implement your own stack\linkedlistdriver.h
+
+1625489717 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_ds_01implement your own stack\stackdriver.c
+	<stdio.h>
+	<stdlib.h>
+	"config.h"
+	"typedefs.h"
+	"linkedlistdriver.h"
+	"stackdriver.h"
+
+1625489539 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_ds_01implement your own stack\stackdriver.h
+
+1625489717 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_ds_01implement your own stack\stackframework.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"config.h"
+	"typedefs.h"
+	"linkedlistdriver.h"
+	"stackdriver.h"
+	"stackframework.h"
+
+1625489539 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_ds_01implement your own stack\stackframework.h
+

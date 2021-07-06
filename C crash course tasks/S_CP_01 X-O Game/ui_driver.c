@@ -10,6 +10,8 @@ Board Our_Board ={' ',' ',' ',\
                   ' ',' ',' ',\
                   ' ',' ',' '};
 Board *pointer_To_Our_Board = &Our_Board;
+
+
 //functions
 void Print_The_Board(void)
 {
@@ -272,6 +274,27 @@ int array_of_Available_places(int arr[9])
     }
     return iterator;
 }
+gamemode modeselection(void)
+{
+    int selection;
+    printf("enter number of your selection:\n");
+    printf("1-single player\n");
+    printf("2-multiplayer\n");
+    selection=(getch()-48);
+    if (selection==single_player || selection==multi_player)
+    {
+        return selection;
+    }
+    else
+    {
+        selection=0;
+        printf("Wrong selection\n");
+    }
+    return selection;
+}
+
+
+
 void UnitTestingDriver(void)
 {
     printf("start unit testing for functions of UIdriver:\n");

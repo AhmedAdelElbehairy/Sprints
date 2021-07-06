@@ -7,6 +7,9 @@
 #include "ui_framework.h"
 extern Board Our_Board;
 extern Board *pointer_To_Our_Board;
+
+
+
 void computer_turn (void)
 {
     int arr_available_places[9];
@@ -31,24 +34,6 @@ int player_turn (gamemode mode,char* user)
         pressed_value=-1;
     return pressed_value;
 }
-gamemode modeselection(void)
-{
-    int selection;
-    printf("enter number of your selection:\n");
-    printf("1-single player\n");
-    printf("2-multiplayer\n");
-    selection=(getch()-48);
-    if (selection==single_player || selection==multi_player)
-    {
-        return selection;
-    }
-    else
-    {
-        selection=0;
-        printf("Wrong selection\n");
-    }
-    return selection;
-}
 void start(void)
 {
     reset_Tic_tac();
@@ -56,7 +41,11 @@ void start(void)
     int playerselection=0;
     int flag=0;
     while(!(mode==single_player || mode==multi_player))
+	{
+		sleep(1);
+		system("cls");
         mode=modeselection();
+	}
     if (mode==single_player)
     {
         if(!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
@@ -86,12 +75,14 @@ void start(void)
         if(check_Win_situation()==Winner)
         {
             printf("we have a winner\n");
+            sleep(1);
         }
         else if(!(pointer_To_Our_Board->UL==' ' || pointer_To_Our_Board->UC==' ' || pointer_To_Our_Board->UR==' ' ||\
                 pointer_To_Our_Board->ML==' ' || pointer_To_Our_Board->MC==' ' || pointer_To_Our_Board->MR==' ' ||\
                 pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' ')&&(check_Win_situation()==NoWinner))
         {
             printf("there is no winners\n");
+            sleep(1);
         }
 
     }
@@ -130,14 +121,19 @@ void start(void)
                 pointer_To_Our_Board->BL==' ' || pointer_To_Our_Board->BC==' ' || pointer_To_Our_Board->BR==' ')&&(check_Win_situation()==NoWinner))
                 {
                     printf("there is no winners\n");
+                    sleep(1);
                 }
                 else
                 {
                     printf("we have a winner\n");
+                    sleep(1);
                 }
 //        Print_The_Board();
     }
     }
+
+	
+	
 void UnitTestingFrameWork(void)
 {
     printf("start unit testing for functions of UIframeWork:\n");

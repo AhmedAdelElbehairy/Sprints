@@ -1,6 +1,10 @@
 #ifndef UI_DRIVER_H
 #define UI_DRIVER_H
 
+typedef enum gamemode {
+        single_player=1,
+        multi_player
+    }gamemode;
 typedef struct{
     char UL;
     char UC;
@@ -36,5 +40,6 @@ int check_The_Location(Board *ptr, locations_of_board location);
 winner check_Win_situation(void);
 void reset_Tic_tac(void);
 int array_of_Available_places(int* arr);
+gamemode modeselection(void);
 void UnitTestingDriver(void);
 #endif // UI_DRIVER_H

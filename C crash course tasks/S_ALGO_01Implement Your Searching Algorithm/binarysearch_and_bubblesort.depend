@@ -45,3 +45,35 @@
 	"typedefs.h"
 	"BubbleSort.h"
 
+1625490120 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_algo_01implement your searching algorithm\binarysearch.c
+	<stdio.h>
+	<stdlib.h>
+	"config.h"
+	"typedefs.h"
+	"BubbleSort.h"
+	"BinarySearch.h"
+
+1625490549 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_algo_01implement your searching algorithm\config.h
+
+1625239208 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_algo_01implement your searching algorithm\typedefs.h
+
+1625490136 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_algo_01implement your searching algorithm\bubblesort.h
+
+1625490136 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_algo_01implement your searching algorithm\binarysearch.h
+
+1625490136 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_algo_01implement your searching algorithm\bubblesort.c
+	<stdio.h>
+	<stdlib.h>
+	"config.h"
+	"typedefs.h"
+	"BubbleSort.h"
+
+1625513335 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_algo_01implement your searching algorithm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"config.h"
+	"typedefs.h"
+	"BubbleSort.h"
+	"BinarySearch.h"
+

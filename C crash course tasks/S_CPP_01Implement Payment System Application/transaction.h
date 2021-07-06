@@ -14,5 +14,6 @@
 
     EN_transStat_t transactionVerification(ST_transaction_t transaction);
     ST_transaction_t transactionProcess (void);
+
     void unitTestingtransaction(void);
 #endif

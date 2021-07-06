@@ -32,5 +32,6 @@
     ST_termianlData_t get_terminal_data(void);
     expiration IsTheCardExpired(uint8_t* expirationDate, uint8_t* transactionDate);
     terminalAcceptance TransactionAmountAcceptanceByTerminal(double amount);
+
     void unitTestingCardAndTerminal(void);
 #endif // CARDANDTERMINAL_

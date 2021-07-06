@@ -88,3 +88,46 @@
 	"server.h"
 	"transaction.h"
 
+1625468368 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\cardandterminal.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"typedefs.h"
+	"cardandterminal.h"
+
+1625239208 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\typedefs.h
+
+1625608438 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\cardandterminal.h
+
+1625469459 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\server.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"typedefs.h"
+	"server.h"
+
+1625608438 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\server.h
+
+1625469623 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\transaction.c
+	<stdio.h>
+	<stdlib.h>
+	"typedefs.h"
+	"cardandterminal.h"
+	"server.h"
+	"transaction.h"
+
+1625608438 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\transaction.h
+
+1625490528 source:c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"config.h"
+	"typedefs.h"
+	"cardandterminal.h"
+	"server.h"
+	"transaction.h"
+
+1625490528 c:\users\zoldeyck\desktop\cpp\sprints\c crash course tasks\s_cpp_01implement payment system application\config.h
+

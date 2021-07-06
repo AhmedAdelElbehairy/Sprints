@@ -23,5 +23,6 @@
     serverAcceptance TransactionAmountAcceptanceByServer(double amount, uint8_t* PAN);
     void modify_Global_server(uint8_t* PAN,double amount);
     void print_Global_server_data(void);
+
     void unitTestingserver(void);
 #endif // SERVER_H

@@ -1,0 +1,40 @@
+/*
+ * TIMER_DRIVER_PRIV.h
+ *
+ *  Created on: Jul 9, 2021
+ *      Author: zoldeyck
+ */
+
+#ifndef TIMER_DRIVER_PRIV_H_
+#define TIMER_DRIVER_PRIV_H_
+
+
+#define TIMER0_Control_REG 		*((volatile u8*)0x53)//TCCR0
+#define TIMER1_Control_REG_A 	*((volatile u8*)0x4F)
+#define TIMER1_Control_REG_B 	*((volatile u8*)0x4E)
+#define TIMER2_Control_REG_ 	*((volatile u8*)0x45)//TCCR2
+
+#define TIMER0_CurrentCount_REG 	*((volatile u8*)0x52)//TCNT0
+#define TIMER1_CurrentCount_REG_H 	*((volatile u8*)0x4D)
+#define TIMER1_CurrentCount_REG_L 	*((volatile u8*)0x4C)
+#define TIMER2_CurrentCount_REG 	*((volatile u8*)0x44)//TCNT0
+
+#define TIMERS_InterruptFlag_REG *((volatile u8*)0x58)
+#define TIMERS_InterruptMask_REG *((volatile u8*)0x59)
+#define TIMER0_OutputCompare_REG *((volatile u8*)0x5C)
+
+
+//BITS OF TIMER0 CONTROL REGISTER
+#define Timer0_FIRST_MODE_SELECT_BIT 6
+#define Timer0_SECOND_MODE_SELECT_BIT 3
+#define Timer0_FIRST_OC0_PIN_OUTPUT_CONTROL_BIT 4
+#define Timer0_SECOND_OC0_PIN_OUTPUT_CONTROL_BIT 5
+#define Timer0_FIRST_CLK_PRESCALAR_CONTROL_BIT 0
+#define Timer0_SECOND_CLK_PRESCALAR_CONTROL_BIT 1
+#define Timer0_THIRD_CLK_PRESCALAR_CONTROL_BIT 2
+//TIMER0 BITS OF INTERRUPT MASK
+#define Timer0_OverFlow_Interrupt_Enable_BIT 0
+#define Timer0_OutputCompareMatch_Interrupt_Enable_BIT 1
+
+
+#endif /* TIMER_DRIVER_PRIV_H_ */

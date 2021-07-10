@@ -1,4 +1,4 @@
-16:41:50 **** Incremental Build of configuration Debug for project DIO_DRIVER_switch_led_toggle ****
+17:09:24 **** Incremental Build of configuration Debug for project DIO_DRIVER_switch_led_toggle ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
@@ -24,7 +24,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    3156 bytes (9.6% Full)
+Program:    3952 bytes (12.1% Full)
 (.text + .data + .bootloader)
 
 Data:          0 bytes (0.0% Full)
@@ -34,5 +34,5 @@ Data:          0 bytes (0.0% Full)
 Finished building: sizedummy
  
 
-16:41:51 Build Finished (took 977ms)
+17:09:25 Build Finished (took 928ms)
 

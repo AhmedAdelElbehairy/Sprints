@@ -1,0 +1,13 @@
+/*
+ * TIMER_DRIVER_typedefs.h
+ *
+ *  Created on: Jul 9, 2021
+ *      Author: zoldeyck
+ */
+
+#ifndef TIMER_DRIVER_TYPEDEFS_H_
+#define TIMER_DRIVER_TYPEDEFS_H_
+typedef int8 TIM_ERROR_t;
+
+
+#endif /* TIMER_DRIVER_TYPEDEFS_H_ */

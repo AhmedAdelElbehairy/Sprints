@@ -197,7 +197,7 @@ DIO_ERROR_RETVAL_t DIO_SetPinVal (DIO_PORT_ID_t DIO_port, DIO_PIN_ID_t DIO_pin, 
 	{
 		if (value == PIN_HIGH)
 		{
-			
+
 			switch (DIO_port)
 			{
 			case PORTA: 
@@ -205,52 +205,52 @@ DIO_ERROR_RETVAL_t DIO_SetPinVal (DIO_PORT_ID_t DIO_port, DIO_PIN_ID_t DIO_pin, 
 				{
 					SET_BIT(PORTA_Register, DIO_pin);
 				}
-				else 
+				else
 				{
 					ErrorValue = EXIT_FAILURE;
 				}
 				break;
-			case PORTB: 
+			case PORTB:
 				if(READ_BIT(DDRB_Register, DIO_pin) == PIN_OUTPUT)
 				{
 					SET_BIT(PORTB_Register, DIO_pin);
 				}
-				else 
+				else
 				{
 					ErrorValue = EXIT_FAILURE;
 				}
 				break;
-			case PORTC: 
+			case PORTC:
 				if(READ_BIT(DDRC_Register, DIO_pin) == PIN_OUTPUT)
 				{
 					SET_BIT(PORTC_Register, DIO_pin);
 				}
-				else 
+				else
 				{
 					ErrorValue = EXIT_FAILURE;
 				}
 				break;
-			case PORTD: 
+			case PORTD:
 				if(READ_BIT(DDRD_Register, DIO_pin) == PIN_OUTPUT)
 				{
 					SET_BIT(PORTD_Register, DIO_pin);
 				}
-				else 
+				else
 				{
 					ErrorValue = EXIT_FAILURE;
-				} 
+				}
 				break;
-			default: 
+			default:
 				ErrorValue = EXIT_FAILURE;
 				break;
 			}
 		}
 		else if (value == PIN_LOW)
 		{
-			
+
 			switch (DIO_port)
 			{
-			case PORTA: 
+			case PORTA:
 				if(READ_BIT(DDRA_Register, DIO_pin) == PIN_OUTPUT)
 				{
 					CLEAR_BIT(PORTA_Register, DIO_pin);
@@ -350,4 +350,122 @@ Byte DIO_GetPinVal (DIO_PORT_ID_t DIO_port, DIO_PIN_ID_t DIO_pin)
 	}
 
 	return RETVAL;
+}
+
+DIO_ERROR_RETVAL_t DIO_TogPortVal (DIO_PORT_ID_t DIO_port , Byte value)
+{
+	DIO_ERROR_RETVAL_t ErrorValue = EXIT_SUCCESFUL;
+	if((DIO_port <= PORTD))
+	{
+		switch (DIO_port)
+		{
+		case     PORTA:
+			if(READ_REG(DDRA_Register) == PORT_OUTPUT)
+			{
+				TOG_REG(PORTA_Register, value);
+			}
+			else
+			{
+				ErrorValue = EXIT_FAILURE;
+			}
+			break;
+		case     PORTB:
+			if(READ_REG(DDRB_Register) == PORT_OUTPUT)
+			{
+				TOG_REG(PORTB_Register, value);
+			}
+			else
+			{
+				ErrorValue = EXIT_FAILURE;
+			}
+			break;
+		case     PORTC:
+			if(READ_REG(DDRC_Register) == PORT_OUTPUT)
+			{
+				TOG_REG(PORTC_Register, value);
+			}
+			else
+			{
+				ErrorValue = EXIT_FAILURE;
+			}
+			break;
+		case     PORTD:
+			if(READ_REG(DDRD_Register) == PORT_OUTPUT)
+			{
+				TOG_REG(PORTD_Register, value);
+			}
+			else
+			{
+				ErrorValue = EXIT_FAILURE;
+			}
+			break;
+		default:
+			ErrorValue = EXIT_FAILURE;
+			break;
+		}
+	}
+	else
+	{
+		ErrorValue = EXIT_FAILURE;
+	}
+	return ErrorValue;
+}
+
+DIO_ERROR_RETVAL_t DIO_TogPinVal (DIO_PORT_ID_t DIO_port, DIO_PIN_ID_t DIO_pin)
+{
+	DIO_ERROR_RETVAL_t ErrorValue = EXIT_SUCCESFUL;
+	if ((DIO_port <= PORTD) && (DIO_pin <= PIN7))
+	{
+			switch (DIO_port)
+			{
+			case PORTA:
+				if(READ_BIT(DDRA_Register, DIO_pin) == PIN_OUTPUT)
+				{
+					TOG_BIT(PORTA_Register, DIO_pin);
+				}
+				else
+				{
+					ErrorValue = EXIT_FAILURE;
+				}
+				break;
+			case PORTB:
+				if(READ_BIT(DDRB_Register, DIO_pin) == PIN_OUTPUT)
+				{
+					TOG_BIT(PORTB_Register, DIO_pin);
+				}
+				else
+				{
+					ErrorValue = EXIT_FAILURE;
+				}
+				break;
+			case PORTC:
+				if(READ_BIT(DDRC_Register, DIO_pin) == PIN_OUTPUT)
+				{
+					TOG_BIT(PORTC_Register, DIO_pin);
+				}
+				else
+				{
+					ErrorValue = EXIT_FAILURE;
+				}
+				break;
+			case PORTD:
+				if(READ_BIT(DDRD_Register, DIO_pin) == PIN_OUTPUT)
+				{
+					TOG_BIT(PORTD_Register, DIO_pin);
+				}
+				else
+				{
+					ErrorValue = EXIT_FAILURE;
+				}
+				break;
+			default:
+				ErrorValue = EXIT_FAILURE;
+				break;
+			}
+	}
+	else
+	{
+		ErrorValue = EXIT_FAILURE;
+	}
+	return ErrorValue;
 }

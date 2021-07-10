@@ -1,0 +1,61 @@
+/*
+ * TIMER_DRIVER.h
+ *
+ *  Created on: Jul 9, 2021
+ *      Author: zoldeyck
+ */
+
+#ifndef TIMER_DRIVER_H_
+#define TIMER_DRIVER_H_
+
+	#define TIMER0 0
+	#define TIMER1 1
+	#define TIMER2 2
+	// the pre-scale factor (1, 8, 64, 256, or 1024).
+	//#define PRESCALAR_1		1
+	//#define PRESCALAR_8		2
+	//#define PRESCALAR_64		3
+	//#define PRESCALAR_256		4
+	//#define PRESCALAR_1024	5
+	#define	_NoCLK					0
+	#define	_SYSCLK					1
+	#define	_SYSCLK_DivideBy8		2
+	#define	_SYSCLK_DivideBy64		3
+	#define	_SYSCLK_DivideBy256		4
+	#define	_SYSCLK_DivideBy1024	5
+	#define	_EXTCLK_FallingEdge		6
+	#define	_EXTCLK_RisingEdge		7
+	// timer modes
+	//#define NORMAL_MODE 				0
+	//#define CENTERALIGNEDPWM_MODE		1
+	//#define CLEARTIMERCOMPARE_MODE	2
+	//#define EDGEALIGNEDPWM_MODE		3
+	#define	Normal					0
+	#define	CLR_Timer_OnCompare		1
+	#define	PWM_PhaseCorrect		2
+	#define	Fast_PWM				3
+	// compare-match output modes
+	#define CO_DISABLED_MODE	0
+	#define CO_TOGGLE_MODE		1 //available only in non-pwm modes
+	#define CO_CLEAR_MODE		2
+	#define CO_SET_MODE			3
+
+	#define EXIT_SUCCESFUL 0
+	#define EXIT_FAILURE   1
+
+
+	TIM_ERROR_t TIM_Init (TIM_SELECT_t Timer, CLK_SELECT_t clock, TIMER_MODE_t timer_mode, CMPMATCH_OUTPUT_t compareMatch_output_mode, uint16_t counterValue, uint16_t compareValue);
+	TIM_ERROR_t TIM_SetTimerPreLoadVal (TIM_SELECT_t Timer, uint16_t counterValue);
+	TIM_ERROR_t TIM_SetTimerOCVal (TIM_SELECT_t Timer, uint16_t compareValue);
+	TIM_ERROR_t TIM_SetTimerOVFAction (TIM_SELECT_t Timer, void(*callback)(void));
+	TIM_ERROR_t TIM_SetTimerOCAction (TIM_SELECT_t Timer, void(*callback)(void));
+	TIM_ERROR_t TIM_MODE_SLCT(TIM_SELECT_t Timer, TIMER_MODE_t mode);
+	TIM_ERROR_t TIM_CLK_SLCT(TIM_SELECT_t Timer, CLK_SELECT_t clock);
+	TIM_ERROR_t TIM_OC_MODE_SLCT(TIM_SELECT_t Timer, CMPMATCH_OUTPUT_t compareMatch_output_mode);
+	void TIM0_OVF (void)__attribute__((signal,used));
+	void TIM0_COMP (void)__attribute__((signal,used));
+//	TIM_ERROR_t TIM_Delay_US(Delay_value_t delayVal);
+//	TIM_ERROR_t TIM_Delay_MS(Delay_value_t delayVal);
+
+
+#endif /* TIMER_DRIVER_H_ */

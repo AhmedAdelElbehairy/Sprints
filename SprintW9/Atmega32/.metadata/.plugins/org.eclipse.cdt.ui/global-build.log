@@ -1,4 +1,4 @@
-17:46:37 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:24:14 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
@@ -6,7 +6,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5456 bytes (16.7% Full)
+Program:    6336 bytes (19.3% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -15,367 +15,176 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-17:48:45 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:24:56 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6348 bytes (19.4% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:21 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6348 bytes (19.4% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:27:54 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-../TIMER_DRIVER.c: In function 'TIM_Init':
-../TIMER_DRIVER.c:29: error: expected ';' before 'DIO_SetPortVal'
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6360 bytes (19.4% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:28:10 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6372 bytes (19.4% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:33:31 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+../TIMER_DRIVER.c: In function 'TIM_Interrupt_Enable':
+../TIMER_DRIVER.c:259: error: expected ';' before 'switch'
+../TIMER_DRIVER.c:256: warning: unused variable 'retVal'
+../TIMER_DRIVER.c:282: warning: control reaches end of non-void function
 make: *** [TIMER_DRIVER.o] Error 1
-17:48:52 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:33:42 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5470 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-17:50:21 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+../TIMER_DRIVER.c: In function 'TIM_Interrupt_Enable':
+../TIMER_DRIVER.c:258: error: expected ';' before ':' token
+../TIMER_DRIVER.c:256: warning: unused variable 'retVal'
+../TIMER_DRIVER.c:282: warning: control reaches end of non-void function
+make: *** [TIMER_DRIVER.o] Error 1
+21:33:54 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../TIMER_DRIVER.c
  
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5456 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-17:54:02 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5466 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-17:58:08 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5460 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:01:00 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5454 bytes (16.6% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:01:46 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5466 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:02:00 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5452 bytes (16.6% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:03:16 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5456 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:03:36 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5454 bytes (16.6% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:04:47 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:14:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../main.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -397,7 +206,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5488 bytes (16.7% Full)
+Program:    6380 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -406,14 +215,11 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:05:22 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:35:31 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../TIMER_DRIVER.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -435,7 +241,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5490 bytes (16.8% Full)
+Program:    6380 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -444,14 +250,11 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:06:13 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:36:18 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../TIMER_DRIVER.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -473,7 +276,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5520 bytes (16.8% Full)
+Program:    6396 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -482,14 +285,11 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:07:26 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:36:40 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../TIMER_DRIVER.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -511,7 +311,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5520 bytes (16.8% Full)
+Program:    6380 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -520,14 +320,11 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:08:13 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:37:00 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../TIMER_DRIVER.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -549,7 +346,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5550 bytes (16.9% Full)
+Program:    6386 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -558,14 +355,168 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:09:07 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:37:22 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:38:08 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:39:00 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:39:33 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:39:37 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:40:11 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:14:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../main.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -587,7 +538,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5550 bytes (16.9% Full)
+Program:    6378 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -596,90 +547,16 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:10:44 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:40:56 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
 Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../TIMER_DRIVER.c
  
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5462 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:11:09 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5462 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:13:40 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:14:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../main.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -701,7 +578,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5476 bytes (16.7% Full)
+Program:    6386 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -710,22 +587,11 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:14:56 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:41:46 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:14:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../main.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -747,7 +613,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5470 bytes (16.7% Full)
+Program:    6386 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -756,98 +622,11 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:15:24 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:42:26 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5470 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:17:50 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
-Building target: TIMER_DRIVER_LED_BLINK.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
-Finished building target: TIMER_DRIVER_LED_BLINK.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
-Finished building: TIMER_DRIVER_LED_BLINK.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
-Finished building: TIMER_DRIVER_LED_BLINK.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5470 bytes (16.7% Full)
-(.text + .data + .bootloader)
-
-Data:          4 bytes (0.2% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-18:19:23 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
-make all 
-Building file: ../TIMER_DRIVER.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
-In file included from ../TIMER_DRIVER.c:13:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../TIMER_DRIVER.c
- 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:14:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
 Finished building: ../main.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
@@ -869,7 +648,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5462 bytes (16.7% Full)
+Program:    6386 bytes (19.5% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)
@@ -878,15 +657,12 @@ Data:          4 bytes (0.2% Full)
 
 Finished building: sizedummy
  
-18:20:11 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+21:44:33 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
 make all 
-Building file: ../main.c
+Building file: ../TIMER_DRIVER.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:14:
-../TIMER_DRIVER.h:64: warning: 'TIM0_OVF' appears to be a misspelled signal handler
-../TIMER_DRIVER.h:65: warning: 'TIM0_COMP' appears to be a misspelled signal handler
-Finished building: ../main.c
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
  
 Building target: TIMER_DRIVER_LED_BLINK.elf
 Invoking: AVR C Linker
@@ -907,7 +683,252 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5462 bytes (16.7% Full)
+Program:    6320 bytes (19.3% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:44:47 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:48:36 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:54:55 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:02:19 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6394 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:08:43 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6386 bytes (19.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:09:30 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6372 bytes (19.4% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:28:53 **** Incremental Build of configuration Debug for project TIMER_DRIVER_LED_BLINK ****
+make all 
+Building file: ../TIMER_DRIVER.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_DRIVER.d" -MT"TIMER_DRIVER.o" -c -o "TIMER_DRIVER.o" "../TIMER_DRIVER.c"
+Finished building: ../TIMER_DRIVER.c
+ 
+Building target: TIMER_DRIVER_LED_BLINK.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,TIMER_DRIVER_LED_BLINK.map -mmcu=atmega32 -o "TIMER_DRIVER_LED_BLINK.elf"  ./Mcal/DIO/DIO_DRIVER.o  ./TIMER_DRIVER.o ./main.o   
+Finished building target: TIMER_DRIVER_LED_BLINK.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S TIMER_DRIVER_LED_BLINK.elf  >"TIMER_DRIVER_LED_BLINK.lss"
+Finished building: TIMER_DRIVER_LED_BLINK.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex TIMER_DRIVER_LED_BLINK.elf  "TIMER_DRIVER_LED_BLINK.hex"
+Finished building: TIMER_DRIVER_LED_BLINK.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_DRIVER_LED_BLINK.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6372 bytes (19.4% Full)
 (.text + .data + .bootloader)
 
 Data:          4 bytes (0.2% Full)

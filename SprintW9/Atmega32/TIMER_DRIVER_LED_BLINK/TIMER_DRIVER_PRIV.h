@@ -71,12 +71,12 @@
 #define TIM0_OverFlow_Interrupt_Enable_BIT 		0
 #define TIM0_OutputComp_Interrupt_Enable_BIT 	1
 //BITS OF TIMER0 for INTERRUPT FLAG
-#define TIM0_OVF_Interrupt_Flg_BIT 		0
-#define TIM0_OC_Interrupt_Flg_BIT 	1
+#define TIM0_OVF_Interrupt_Flg_BIT 				0
+#define TIM0_OC_Interrupt_Flg_BIT 				1
 //BIT OF GLOBAL INTERRUPT MASK
 #define GLOBAL_Interrupt_Enable_BIT 			7
 
-void static (*TIM0_OVFAction_callback)(void);
-void static (*TIM0_OCAction_callback)(void);
+void static (*TIM0_OVFAction_callback)(void)=NULL;
+void static (*TIM0_OCAction_callback)(void)=NULL;
 
 #endif /* TIMER_DRIVER_PRIV_H_ */

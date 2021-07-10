@@ -28,7 +28,7 @@
 	#define PORT_HIGH 0xFF
 	
 	#define EXIT_SUCCESFUL 0
-	#define EXIT_FAILURE   -1
+	#define EXIT_FAILURE   1
 		
 	
 	DIO_ERROR_RETVAL_t DIO_PortInit (DIO_PORT_ID_t port, DIO_DIRECTION_t direction);
@@ -38,5 +38,7 @@
 	DIO_ERROR_RETVAL_t DIO_SetPinVal (DIO_PORT_ID_t port, DIO_PIN_ID_t pin, Byte value);
 	Byte DIO_GetPortVal (DIO_PORT_ID_t port);
 	Byte DIO_GetPinVal (DIO_PORT_ID_t port, DIO_PIN_ID_t pin);
+	DIO_ERROR_RETVAL_t DIO_TogPortVal (DIO_PORT_ID_t DIO_port , Byte value);
+	DIO_ERROR_RETVAL_t DIO_TogPinVal (DIO_PORT_ID_t DIO_port, DIO_PIN_ID_t DIO_pin);
 	
 #endif

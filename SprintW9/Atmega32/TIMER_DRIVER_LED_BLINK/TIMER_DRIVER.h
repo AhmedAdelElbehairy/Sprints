@@ -42,7 +42,7 @@
 	#define TIM1OVF 				3
 
 	#define EXIT_SUCCESFUL			0
-	#define EXIT_FAILURE   			-1
+	#define EXIT_FAILURE   			1
 
 	#define TIM_FLAG_UP				0
 	#define TIM_FLAG_DOWN   		1
@@ -61,8 +61,7 @@
 	TIM_FLAG_STAT_t TIM_Flag_Get(TIM_SELECT_t Timer, TIM_Interrupt_t interrupt);
 	TIM_ERROR_t TIM_Flag_Reset(TIM_SELECT_t Timer, TIM_Interrupt_t interrupt);
 	TIM_ERROR_t TIM_Init_OC_PIN(TIM_SELECT_t Timer, TIM_CMPMATCH_OUTPUT_t compareMatch_output_mode);
-	void TIM0_OVF (void)__attribute__((signal,used));
-	void TIM0_COMP (void)__attribute__((signal,used));
+
 
 //	TIM_ERROR_t TIM_Delay_US(Delay_value_t delayVal);
 //	TIM_ERROR_t TIM_Delay_MS(Delay_value_t delayVal);

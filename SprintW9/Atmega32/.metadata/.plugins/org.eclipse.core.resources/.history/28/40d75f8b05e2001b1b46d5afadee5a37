@@ -2,7 +2,6 @@
 #include "../../Infrastructure/LIB/Bit Operations.h"
 #include "../DIO/DIO_DRIVER_TypeDef.h"
 #include "../DIO/DIO_DRIVER.h"
-#include "../DIO/DIO_DRIVER_Priv.h"
 
 DIO_ERROR_RETVAL_t DIO_PortInit (DIO_PORT_ID_t DIO_port, DIO_DIRECTION_t DIO_direction)
 {

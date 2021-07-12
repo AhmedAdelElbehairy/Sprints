@@ -8,9 +8,10 @@
 #include "Infrastructure/LIB/STD_TYPES.h"
 #include "Infrastructure/LIB/Bit Operations.h"
 #include "Mcal/DIO/DIO_DRIVER_TypeDef.h"
+#include "Mcal/DIO/DIO_DRIVER_Priv.h"
 #include "Mcal/DIO/DIO_DRIVER.h"
 #include "Mcal/TIM/TIMER_DRIVER_typedefs.h"
-#include "Mcal/TIM/TIMER_DRIVER.h"
+#include "TIMER_DRIVER.h"
 void led_toggle();
 
 int main()

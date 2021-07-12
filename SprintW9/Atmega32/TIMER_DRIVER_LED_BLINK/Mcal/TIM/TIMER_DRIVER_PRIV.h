@@ -67,16 +67,54 @@
 #define	TIM0_EXTCLK_FallingEdge_SETMSK		0b00000110
 #define	TIM0_EXTCLK_RisingEdge_SETMSK		0b00000111
 
+//BITS OF TIMER2 CONTROL REGISTER
+#define TIM2_MODE_SELECT_BIT1 				6
+#define TIM2_MODE_SELECT_BIT2 				3
+#define TIM2_MODE_SELECT_CLRMSK 			0b01001000
+#define	TIM2_Normal_SETMSK					0b00000000
+#define	TIM2_CLR_Timer_OnCompare_SETMSK		0b00001000
+#define	TIM2_PWM_PhaseCorrect_SETMSK		0b01000000
+#define	TIM2_Fast_PWM_SETMSK				0b01001000
+
+#define TIM2_OC0_OUTPUT_CTRL_BIT1 			4
+#define TIM2_OC0_OUTPUT_CTRL_BIT2 			5
+#define TIM2_OC2_OUTPUT_CTRL_CLRMSK 		0b00110000
+#define TIM2_CO_DISABLED_MODE_SETMSK		0b00000000
+#define TIM2_CO_TOGGLE_MODE_SETMSK			0b00010000
+#define TIM2_CO_CLEAR_MODE_SETMSK			0b00100000
+#define TIM2_CO_SET_MODE_SETMSK				0b00110000
+
+#define TIM2_CLK_PRSCLR_CTRL_BIT1 			0
+#define TIM2_CLK_PRSCLR_CTRL_BIT2 			1
+#define TIM2_CLK_PRSCLR_CTRL_BIT3 			2
+#define TIM2_CLK_PRSCLR_CTRL_CLRMSK 		0b00000111
+#define	TIM2_NoCLK_SETMSK					0b00000000
+#define	TIM2_SYSCLK_SETMSK					0b00000001
+#define	TIM2_SYSCLK_DivideBy8_SETMSK		0b00000010
+#define	TIM2_SYSCLK_DivideBy64_SETMSK		0b00000011
+#define	TIM2_SYSCLK_DivideBy256_SETMSK		0b00000100
+#define	TIM2_SYSCLK_DivideBy1024_SETMSK		0b00000101
+#define	TIM2_EXTCLK_FallingEdge_SETMSK		0b00000110
+#define	TIM2_EXTCLK_RisingEdge_SETMSK		0b00000111
+
 //BITS OF TIMER0 for INTERRUPT MASK
 #define TIM0_OverFlow_Interrupt_Enable_BIT 		0
 #define TIM0_OutputComp_Interrupt_Enable_BIT 	1
 //BITS OF TIMER0 for INTERRUPT FLAG
 #define TIM0_OVF_Interrupt_Flg_BIT 				0
 #define TIM0_OC_Interrupt_Flg_BIT 				1
+//BITS OF TIMER2 for INTERRUPT MASK
+#define TIM2_OverFlow_Interrupt_Enable_BIT 		6
+#define TIM2_OutputComp_Interrupt_Enable_BIT 	7
+//BITS OF TIMER2 for INTERRUPT FLAG
+#define TIM2_OVF_Interrupt_Flg_BIT 				6
+#define TIM2_OC_Interrupt_Flg_BIT 				7
 //BIT OF GLOBAL INTERRUPT MASK
 #define GLOBAL_Interrupt_Enable_BIT 			7
 
 void static (*TIM0_OVFAction_callback)(void)=NULL;
 void static (*TIM0_OCAction_callback)(void)=NULL;
+void static (*TIM2_OVFAction_callback)(void)=NULL;
+void static (*TIM2_OCAction_callback)(void)=NULL;
 
 #endif /* TIMER_DRIVER_PRIV_H_ */

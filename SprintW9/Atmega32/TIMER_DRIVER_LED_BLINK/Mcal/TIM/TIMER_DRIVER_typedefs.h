@@ -14,5 +14,6 @@
 	typedef uint8_t TIMER_MODE_t;
 	typedef uint8_t TIM_CLK_SELECT_t;
 	typedef uint8_t TIM_CMPMATCH_OUTPUT_t;
+	typedef uint32_t Delay_value_t;
 
 #endif /* TIMER_DRIVER_TYPEDEFS_H_ */

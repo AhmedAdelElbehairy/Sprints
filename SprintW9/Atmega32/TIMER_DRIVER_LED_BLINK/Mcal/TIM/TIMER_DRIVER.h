@@ -31,7 +31,7 @@
 	#define CO_TOGGLE_MODE			1 //available only in non-pwm modes
 	#define CO_CLEAR_MODE			2
 	#define CO_SET_MODE				3
-
+	//available Timer interrupts
 	#define TIM0OVF 				0
 	#define TIM0COMP 				1
 	#define TIM2COMP 				0
@@ -61,10 +61,9 @@
 	TIM_FLAG_STAT_t TIM_Flag_Get(TIM_SELECT_t Timer, TIM_Interrupt_t interrupt);
 	TIM_ERROR_t TIM_Flag_Reset(TIM_SELECT_t Timer, TIM_Interrupt_t interrupt);
 	TIM_ERROR_t TIM_Init_OC_PIN(TIM_SELECT_t Timer, TIM_CMPMATCH_OUTPUT_t compareMatch_output_mode);
-
-
-//	TIM_ERROR_t TIM_Delay_US(Delay_value_t delayVal);
-//	TIM_ERROR_t TIM_Delay_MS(Delay_value_t delayVal);
+	TIM_FLAG_STAT_t TIM_Flag_Get(TIM_SELECT_t Timer, TIM_Interrupt_t interrupt);
+	TIM_ERROR_t TIM_Delay_US(TIM_SELECT_t Timer, Delay_value_t delayVal);
+	TIM_ERROR_t TIM_Delay_MS(TIM_SELECT_t Timer, Delay_value_t delayVal);
 
 
 #endif /* TIMER_DRIVER_H_ */

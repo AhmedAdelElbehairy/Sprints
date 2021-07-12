@@ -35,6 +35,7 @@
 	DIO_ERROR_RETVAL_t DIO_PinInit (DIO_PORT_ID_t port, DIO_PIN_ID_t pin, DIO_DIRECTION_t direction);
 	DIO_ERROR_RETVAL_t DIO_PinEnablePullUp (DIO_PORT_ID_t port, DIO_PIN_ID_t pin);
 	DIO_ERROR_RETVAL_t DIO_SetPortVal (DIO_PORT_ID_t port, Byte value);
+	DIO_ERROR_RETVAL_t DIO_ClrPortVal(DIO_PORT_ID_t DIO_port, Byte value);
 	DIO_ERROR_RETVAL_t DIO_SetPinVal (DIO_PORT_ID_t port, DIO_PIN_ID_t pin, Byte value);
 	Byte DIO_GetPortVal (DIO_PORT_ID_t port);
 	Byte DIO_GetPinVal (DIO_PORT_ID_t port, DIO_PIN_ID_t pin);

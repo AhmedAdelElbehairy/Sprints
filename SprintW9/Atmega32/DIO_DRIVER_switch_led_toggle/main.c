@@ -1,24 +1,19 @@
-#include "Infrastructure/LIB/STD_TYPES.h"
-#include "Infrastructure/LIB/Bit Operations.h"
-#include "Mcal/DIO/DIO_DRIVER_TypeDef.h"
-#include "Mcal/DIO/DIO_DRIVER_Priv.h"
-#include "Mcal/DIO/DIO_DRIVER.h"
+#include "INFRASTRUCTURE/LIB/STD_TYPES.h"
+#include "INFRASTRUCTURE/LIB/Bit Operations.h"
+#include "MCAL/DIO/DIO_DRIVER_TypeDef.h"
+#include "MCAL/DIO/DIO_DRIVER.h"
+#include "HAL/PushButton/PushButton_TypeDef.h"
+#include "HAL/PushButton/PushButton.h"
+#include "HAL/LED/LED.h"
+#include "APP/APP.h"
 
 int main(void)
 {
-    /* Replace with your application code */
-	//test
-DIO_PinInit(PORTC, PIN0, PIN_OUTPUT);
-DIO_PinInit(PORTA,PIN1,PIN_INPUT);
-DIO_PinEnablePullUp(PORTA,PIN1);
+
+	APP_init(PORTA,PIN1,PORTA, PIN0);
     while (1)
     {
-    	//test
-    	if((DIO_GetPinVal(PORTA,PIN1))==0)
-    	{
-    		//wait for the de-bouncing
-    		while((DIO_GetPinVal(PORTA,PIN1))!=1);
-    		DIO_TogPinVal(PORTC, PIN0);
-    	}
+    	APP_start();
+
     }
 }

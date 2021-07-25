@@ -1,7 +1,5 @@
 #include "../../INFRASTRUCTURE/LIB/STD_TYPES.h"
 #include "../../INFRASTRUCTURE/LIB/Bit Operations.h"
-#include "../DIO/DIO_DRIVER_TypeDef.h"
-#include "../DIO/DIO_DRIVER.h"
 #include"UART.h"
 
 void static (*UART_RX_Complete_callback)(void)=NULL;
@@ -43,7 +41,6 @@ uint8_t UART_Init(uint8_t UartNumber) {
 				READ_BIT(ParityMode,1)<<UART_ParityModeSelectBit_1_BIT);
 		MODIFY_REG(UART_ControlStatusRegC, UART_ParityModeSelectBit_0_MSK,
 				READ_BIT(ParityMode,0)<<UART_ParityModeSelectBit_0_BIT);
-		DIO_SetPortVal(PORTA, UART_ControlStatusRegC);
 		/* Setting communication mode (synch. or Asynch.)*/
 		MODIFY_REG(UART_ControlStatusRegC, UART_SynchAsynchModeSelect_MSK,
 				CommunicationMode<<UART_SynchAsynchModeSelect_BIT);
@@ -88,7 +85,6 @@ uint8_t UART_ReceiveChar(uint8_t UartNumber, ptr_uint8_t RxChar) {
 	uint8_t ErrRetVal = OperationStarted;
 	if (READ_BIT(UART_ControlStatusRegA,7) == 1) {
 		*RxChar = UART_DataReg;
-		DIO_SetPortVal(PORTA, *RxChar);
 		ErrRetVal = OperationSuccess;
 	}
 	else

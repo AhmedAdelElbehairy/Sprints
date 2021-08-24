@@ -1,6 +1,8 @@
 #ifndef REPO_LIB_STD_TYPES_H_
 #define REPO_LIB_STD_TYPES_H_
-	
+
+	#define NULL (void*)0
+
 	typedef unsigned char uint8_t;
 	typedef unsigned short int uint16_t;
 	typedef unsigned long int uint32_t;
@@ -13,10 +15,9 @@
 	typedef double float64_t;
 
 	typedef long double float96_t;
+	typedef unsigned char* ptr_uint8_t;
 	
 	typedef uint8_t Byte;
-	
-	#define NULL_PTR (void*)0
 	
 	typedef union
 	{

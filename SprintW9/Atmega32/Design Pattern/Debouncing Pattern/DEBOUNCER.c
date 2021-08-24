@@ -1,9 +1,8 @@
 #include "DEBOUNCER.h"
-extern volatile STR_Debouncer_t debounce;
+/*extern volatile STR_Debouncer_t debounce;*/
 void DebouncingFunction(STR_Debouncer_t* me, uint32_t ConfigurableWindow, uint8_t swstate)
 {
 	static uint8_t flag = 0;
-	uint8_t DebouncingDeviceState = 0;
 	static uint8_t State = 255;
 	static uint32_t WindowCurrentCount = 0;
 	if(me != NULL_PTR)
@@ -36,7 +35,7 @@ void DebouncingFunction(STR_Debouncer_t* me, uint32_t ConfigurableWindow, uint8_
 					{
 						if(WindowCurrentCount == me->ConfigurableWindow)
 						{
-							me->OldState = DebouncingDeviceState;
+							me->OldState = swstate;
 							WindowCurrentCount = 0;
 							State = 1;
 						}

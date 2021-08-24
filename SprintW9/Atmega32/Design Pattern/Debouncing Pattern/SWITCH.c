@@ -19,12 +19,13 @@ void SWITCH_Constructor(STR_Switch_t* me, uint8_t PORT, uint8_t PIN, uint8_t PUL
 	DIO_PinInit (me->PORT, me->PIN, PIN_INPUT);
 	if(PULLEDUP)
 		DIO_PinEnablePullUp (me->PORT, me->PIN);
-	me->SwitchState = DIO_GetPinVal (me->PORT, me->PIN);
+	/*me->SwitchState = DIO_GetPinVal (me->PORT, me->PIN);*/
+	me->SwitchState = x;	
 }
 void SWITCH_Main(STR_Switch_t* me)
 {
 	uint8_t x;
 	SWITCH_GetState(me,&x);
-	DebouncingFunction(&(me->Debounce), 10, x);
+	DebouncingFunction(&(me->Debounce), 10000000, x);
 	Switch_FinaL_state = me->Debounce.OldState;
 }

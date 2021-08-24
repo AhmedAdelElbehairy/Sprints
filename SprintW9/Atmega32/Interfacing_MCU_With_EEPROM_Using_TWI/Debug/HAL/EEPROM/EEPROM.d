@@ -1,0 +1,27 @@
+HAL/EEPROM/EEPROM.o HAL/EEPROM/EEPROM.o: ../HAL/EEPROM/EEPROM.c \
+  ../HAL/EEPROM/../../Infrastructure/LIB/STD_TYPES.h \
+  ../HAL/EEPROM/../../Infrastructure/LIB/Bit\ Operations.h \
+  ../HAL/EEPROM/../../MCAL/TWI/TWI.h \
+  ../HAL/EEPROM/../../MCAL/TWI/TWI_PRIV.h \
+  ../HAL/EEPROM/../../MCAL/TWI/TWI_CONFIG.h \
+  ../HAL/EEPROM/../../MCAL/UART/UART.h \
+  ../HAL/EEPROM/../../MCAL/UART/UART_CONFIG.h \
+  ../HAL/EEPROM/../../MCAL/UART/UART_PRIV.h ../HAL/EEPROM/EEPROM_CONFIG.h
+
+../HAL/EEPROM/../../Infrastructure/LIB/STD_TYPES.h:
+
+../HAL/EEPROM/../../Infrastructure/LIB/Bit\ Operations.h:
+
+../HAL/EEPROM/../../MCAL/TWI/TWI.h:
+
+../HAL/EEPROM/../../MCAL/TWI/TWI_PRIV.h:
+
+../HAL/EEPROM/../../MCAL/TWI/TWI_CONFIG.h:
+
+../HAL/EEPROM/../../MCAL/UART/UART.h:
+
+../HAL/EEPROM/../../MCAL/UART/UART_CONFIG.h:
+
+../HAL/EEPROM/../../MCAL/UART/UART_PRIV.h:
+
+../HAL/EEPROM/EEPROM_CONFIG.h:

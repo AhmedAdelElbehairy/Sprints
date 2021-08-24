@@ -1,0 +1,450 @@
+Archive member included because of file (symbol)
+
+e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./main.o (__do_copy_data)
+e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              ./MCAL/UART/UART.o (__do_clear_bss)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD ./MCAL/UART/UART.o
+LOAD ./MCAL/DIO/DIO_DRIVER.o
+LOAD ./APP/APP.o
+LOAD ./main.o
+LOAD e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x173c
+ *(.vectors)
+ .vectors       0x00000000       0x54 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x16 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ .init4         0x00000076       0x10 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000076                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000086        0x8 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x0000008e        0x4 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000008e                __vector_1
+                0x0000008e                __vector_12
+                0x0000008e                __bad_interrupt
+                0x0000008e                __vector_6
+                0x0000008e                __vector_3
+                0x0000008e                __vector_11
+                0x0000008e                __vector_17
+                0x0000008e                __vector_19
+                0x0000008e                __vector_7
+                0x0000008e                __vector_5
+                0x0000008e                __vector_4
+                0x0000008e                __vector_9
+                0x0000008e                __vector_2
+                0x0000008e                __vector_8
+                0x0000008e                __vector_10
+                0x0000008e                __vector_16
+                0x0000008e                __vector_18
+                0x0000008e                __vector_20
+ .text          0x00000092        0x0 ./MCAL/UART/UART.o
+ .text          0x00000092        0x0 ./MCAL/DIO/DIO_DRIVER.o
+ .text          0x00000092        0x0 ./APP/APP.o
+ .text          0x00000092        0x0 ./main.o
+ .text          0x00000092        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000092        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000092        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000092                . = ALIGN (0x2)
+ *(.text.*)
+ .text.UART_Init
+                0x00000092      0x104 ./MCAL/UART/UART.o
+                0x00000092                UART_Init
+ .text.UART_FlushReceiveBuffer
+                0x00000196       0x24 ./MCAL/UART/UART.o
+                0x00000196                UART_FlushReceiveBuffer
+ .text.UART_TransmitChar
+                0x000001ba       0x58 ./MCAL/UART/UART.o
+                0x000001ba                UART_TransmitChar
+ .text.UART_ReceiveChar
+                0x00000212       0x60 ./MCAL/UART/UART.o
+                0x00000212                UART_ReceiveChar
+ .text.UART_TransmitString
+                0x00000272       0x68 ./MCAL/UART/UART.o
+                0x00000272                UART_TransmitString
+ .text.UART_ReceiveString
+                0x000002da       0x6a ./MCAL/UART/UART.o
+                0x000002da                UART_ReceiveString
+ .text.UART_EnableInterrupt
+                0x00000344       0xa2 ./MCAL/UART/UART.o
+                0x00000344                UART_EnableInterrupt
+ .text.UART_DisableInterrupt
+                0x000003e6       0x94 ./MCAL/UART/UART.o
+                0x000003e6                UART_DisableInterrupt
+ .text.UART_Set_RX_CompleteCallback
+                0x0000047a       0x3e ./MCAL/UART/UART.o
+                0x0000047a                UART_Set_RX_CompleteCallback
+ .text.UART_UDRE_Empty_CompleteCallback
+                0x000004b8       0x3e ./MCAL/UART/UART.o
+                0x000004b8                UART_UDRE_Empty_CompleteCallback
+ .text.UART_Set_TX_CompleteCallback
+                0x000004f6       0x3e ./MCAL/UART/UART.o
+                0x000004f6                UART_Set_TX_CompleteCallback
+ .text.__vector_13
+                0x00000534       0x66 ./MCAL/UART/UART.o
+                0x00000534                __vector_13
+ .text.__vector_14
+                0x0000059a       0x66 ./MCAL/UART/UART.o
+                0x0000059a                __vector_14
+ .text.__vector_15
+                0x00000600       0x66 ./MCAL/UART/UART.o
+                0x00000600                __vector_15
+ .text.DIO_PortInit
+                0x00000666       0xac ./MCAL/DIO/DIO_DRIVER.o
+                0x00000666                DIO_PortInit
+ .text.DIO_SetPortVal
+                0x00000712       0xe0 ./MCAL/DIO/DIO_DRIVER.o
+                0x00000712                DIO_SetPortVal
+ .text.DIO_ClrPortVal
+                0x000007f2       0xe0 ./MCAL/DIO/DIO_DRIVER.o
+                0x000007f2                DIO_ClrPortVal
+ .text.DIO_GetPortVal
+                0x000008d2       0x9a ./MCAL/DIO/DIO_DRIVER.o
+                0x000008d2                DIO_GetPortVal
+ .text.DIO_TogPortVal
+                0x0000096c      0x100 ./MCAL/DIO/DIO_DRIVER.o
+                0x0000096c                DIO_TogPortVal
+ .text.DIO_SetPinDirection
+                0x00000a6c      0x230 ./MCAL/DIO/DIO_DRIVER.o
+                0x00000a6c                DIO_SetPinDirection
+ .text.DIO_WritePin
+                0x00000c9c      0x45a ./MCAL/DIO/DIO_DRIVER.o
+                0x00000c9c                DIO_WritePin
+ .text.DIO_TogglePin
+                0x000010f6      0x236 ./MCAL/DIO/DIO_DRIVER.o
+                0x000010f6                DIO_TogglePin
+ .text.DIO_ReadPin
+                0x0000132c      0x190 ./MCAL/DIO/DIO_DRIVER.o
+                0x0000132c                DIO_ReadPin
+ .text.DIO_EnablePinPullup
+                0x000014bc      0x164 ./MCAL/DIO/DIO_DRIVER.o
+                0x000014bc                DIO_EnablePinPullup
+ .text.APP_Init
+                0x00001620       0x14 ./APP/APP.o
+                0x00001620                APP_Init
+ .text.APP_Start
+                0x00001634       0x30 ./APP/APP.o
+                0x00001634                APP_Start
+ .text.main     0x00001664       0xd4 ./main.o
+                0x00001664                main
+ .text.libgcc   0x00001738        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00001738        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001738        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00001738                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001738        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00001738                exit
+                0x00001738                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001738        0x4 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000173c                _etext = .
+
+.data           0x00800060      0x100 load address 0x0000173c
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 ./MCAL/UART/UART.o
+ .data          0x00800060        0x0 ./MCAL/DIO/DIO_DRIVER.o
+ .data          0x00800060        0x0 ./APP/APP.o
+ .data          0x00800060       0xff ./main.o
+ .data          0x0080015f        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080015f        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080015f        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800160                . = ALIGN (0x2)
+ *fill*         0x0080015f        0x1 00
+                0x00800160                _edata = .
+                0x00800160                PROVIDE (__data_end, .)
+
+.bss            0x00800160        0x6
+                0x00800160                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800160        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800160        0x0 ./MCAL/UART/UART.o
+ .bss           0x00800160        0x0 ./MCAL/DIO/DIO_DRIVER.o
+ .bss           0x00800160        0x0 ./APP/APP.o
+ .bss           0x00800160        0x0 ./main.o
+ .bss           0x00800160        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800160        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800160        0x0 e:/courses and certificates/imt/tools/sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ .bss.UART_RX_Complete_callback
+                0x00800160        0x2 ./MCAL/UART/UART.o
+ .bss.UART_UDRE_Empty_callback
+                0x00800162        0x2 ./MCAL/UART/UART.o
+ .bss.UART_TX_Complete_callback
+                0x00800164        0x2 ./MCAL/UART/UART.o
+ *(COMMON)
+                0x00800166                PROVIDE (__bss_end, .)
+                0x0000173c                __data_load_start = LOADADDR (.data)
+                0x0000183c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800166        0x0
+                0x00800166                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800166                PROVIDE (__noinit_end, .)
+                0x00800166                _end = .
+                0x00800166                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x1c74
+ *(.stab)
+ .stab          0x00000000      0xb4c ./MCAL/UART/UART.o
+ .stab          0x00000b4c      0xd08 ./MCAL/DIO/DIO_DRIVER.o
+                                0xd14 (size before relaxing)
+ .stab          0x00001854      0x1f8 ./APP/APP.o
+                                0x204 (size before relaxing)
+ .stab          0x00001a4c      0x228 ./main.o
+                                0x234 (size before relaxing)
+
+.stabstr        0x00000000      0xa57
+ *(.stabstr)
+ .stabstr       0x00000000      0xa57 ./MCAL/UART/UART.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(DesignImplementUartDriverEchoApp.elf elf32-avr)
+LOAD linker stubs

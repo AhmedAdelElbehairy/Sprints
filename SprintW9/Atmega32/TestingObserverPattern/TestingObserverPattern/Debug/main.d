@@ -1,34 +1,20 @@
-main.d main.o: .././main.c \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
- C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include/avr/iom32.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\portpins.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
- c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h
+main.d main.o: .././main.c .././PUSHBUTTON.h \
+ ../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB/STD_TYPES.h \
+ ../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB/Bit_Operations.h \
+ ../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO/DIO_DRIVER_TypeDef.h \
+ ../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO/DIO_DRIVER.h \
+ ../../../Design\ Pattern/Observer\ Pattern/OBSERVER.h .././LED.h
 
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
+.././PUSHBUTTON.h:
 
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h:
+../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB/STD_TYPES.h:
 
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h:
+../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB/Bit_Operations.h:
 
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h:
+../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO/DIO_DRIVER_TypeDef.h:
 
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h:
+../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO/DIO_DRIVER.h:
 
-C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include/avr/iom32.h:
+../../../Design\ Pattern/Observer\ Pattern/OBSERVER.h:
 
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\portpins.h:
-
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h:
-
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h:
-
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h:
-
-c:\users\vetmo\downloads\ahmed\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
+.././LED.h:

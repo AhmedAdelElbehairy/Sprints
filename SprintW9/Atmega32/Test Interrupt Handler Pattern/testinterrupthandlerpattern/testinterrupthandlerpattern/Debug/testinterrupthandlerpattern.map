@@ -199,7 +199,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xb5c
+.text           0x00000000      0xabc
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Users/vetmo/Downloads/Ahmed/Atmel/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -260,143 +260,143 @@ END GROUP
  .text.Install  0x00000078       0x20 InterruptHandler.o
                 0x00000078                Install
  .text.InterruptHandler_1
-                0x00000098       0x18 InterruptHandler.o
+                0x00000098       0x10 InterruptHandler.o
                 0x00000098                InterruptHandler_1
  .text.InterruptHandler_2
-                0x000000b0       0x18 InterruptHandler.o
-                0x000000b0                InterruptHandler_2
+                0x000000a8       0x10 InterruptHandler.o
+                0x000000a8                InterruptHandler_2
  .text.InterruptHandler_3
-                0x000000c8       0x18 InterruptHandler.o
-                0x000000c8                InterruptHandler_3
+                0x000000b8       0x10 InterruptHandler.o
+                0x000000b8                InterruptHandler_3
  .text.InterruptHandler_4
-                0x000000e0       0x18 InterruptHandler.o
-                0x000000e0                InterruptHandler_4
+                0x000000c8       0x10 InterruptHandler.o
+                0x000000c8                InterruptHandler_4
  .text.InterruptHandler_5
-                0x000000f8       0x18 InterruptHandler.o
-                0x000000f8                InterruptHandler_5
+                0x000000d8       0x10 InterruptHandler.o
+                0x000000d8                InterruptHandler_5
  .text.InterruptHandler_6
-                0x00000110       0x18 InterruptHandler.o
-                0x00000110                InterruptHandler_6
+                0x000000e8       0x10 InterruptHandler.o
+                0x000000e8                InterruptHandler_6
  .text.InterruptHandler_7
-                0x00000128       0x18 InterruptHandler.o
-                0x00000128                InterruptHandler_7
+                0x000000f8       0x10 InterruptHandler.o
+                0x000000f8                InterruptHandler_7
  .text.InterruptHandler_8
-                0x00000140       0x18 InterruptHandler.o
-                0x00000140                InterruptHandler_8
+                0x00000108       0x10 InterruptHandler.o
+                0x00000108                InterruptHandler_8
  .text.InterruptHandler_9
-                0x00000158       0x18 InterruptHandler.o
-                0x00000158                InterruptHandler_9
+                0x00000118       0x10 InterruptHandler.o
+                0x00000118                InterruptHandler_9
  .text.InterruptHandler_10
-                0x00000170       0x18 InterruptHandler.o
-                0x00000170                InterruptHandler_10
+                0x00000128       0x10 InterruptHandler.o
+                0x00000128                InterruptHandler_10
  .text.InterruptHandler_11
-                0x00000188       0x18 InterruptHandler.o
-                0x00000188                InterruptHandler_11
+                0x00000138       0x10 InterruptHandler.o
+                0x00000138                InterruptHandler_11
  .text.InterruptHandler_12
-                0x000001a0       0x18 InterruptHandler.o
-                0x000001a0                InterruptHandler_12
+                0x00000148       0x10 InterruptHandler.o
+                0x00000148                InterruptHandler_12
  .text.InterruptHandler_13
-                0x000001b8       0x18 InterruptHandler.o
-                0x000001b8                InterruptHandler_13
+                0x00000158       0x10 InterruptHandler.o
+                0x00000158                InterruptHandler_13
  .text.InterruptHandler_14
-                0x000001d0       0x18 InterruptHandler.o
-                0x000001d0                InterruptHandler_14
+                0x00000168       0x10 InterruptHandler.o
+                0x00000168                InterruptHandler_14
  .text.InterruptHandler_15
-                0x000001e8       0x18 InterruptHandler.o
-                0x000001e8                InterruptHandler_15
+                0x00000178       0x10 InterruptHandler.o
+                0x00000178                InterruptHandler_15
  .text.InterruptHandler_16
-                0x00000200       0x18 InterruptHandler.o
-                0x00000200                InterruptHandler_16
+                0x00000188       0x10 InterruptHandler.o
+                0x00000188                InterruptHandler_16
  .text.InterruptHandler_17
-                0x00000218       0x18 InterruptHandler.o
-                0x00000218                InterruptHandler_17
+                0x00000198       0x10 InterruptHandler.o
+                0x00000198                InterruptHandler_17
  .text.InterruptHandler_18
-                0x00000230       0x18 InterruptHandler.o
-                0x00000230                InterruptHandler_18
+                0x000001a8       0x10 InterruptHandler.o
+                0x000001a8                InterruptHandler_18
  .text.InterruptHandler_19
-                0x00000248       0x18 InterruptHandler.o
-                0x00000248                InterruptHandler_19
+                0x000001b8       0x10 InterruptHandler.o
+                0x000001b8                InterruptHandler_19
  .text.InterruptHandler_20
-                0x00000260       0x18 InterruptHandler.o
-                0x00000260                InterruptHandler_20
+                0x000001c8       0x10 InterruptHandler.o
+                0x000001c8                InterruptHandler_20
  .text.__vector_1
-                0x00000278       0x48 InterruptVectorTable.o
-                0x00000278                __vector_1
+                0x000001d8       0x48 InterruptVectorTable.o
+                0x000001d8                __vector_1
  .text.__vector_2
-                0x000002c0       0x48 InterruptVectorTable.o
-                0x000002c0                __vector_2
+                0x00000220       0x48 InterruptVectorTable.o
+                0x00000220                __vector_2
  .text.__vector_3
-                0x00000308       0x48 InterruptVectorTable.o
-                0x00000308                __vector_3
+                0x00000268       0x48 InterruptVectorTable.o
+                0x00000268                __vector_3
  .text.__vector_4
-                0x00000350       0x48 InterruptVectorTable.o
-                0x00000350                __vector_4
+                0x000002b0       0x48 InterruptVectorTable.o
+                0x000002b0                __vector_4
  .text.__vector_5
-                0x00000398       0x48 InterruptVectorTable.o
-                0x00000398                __vector_5
+                0x000002f8       0x48 InterruptVectorTable.o
+                0x000002f8                __vector_5
  .text.__vector_6
-                0x000003e0       0x48 InterruptVectorTable.o
-                0x000003e0                __vector_6
+                0x00000340       0x48 InterruptVectorTable.o
+                0x00000340                __vector_6
  .text.__vector_7
-                0x00000428       0x48 InterruptVectorTable.o
-                0x00000428                __vector_7
+                0x00000388       0x48 InterruptVectorTable.o
+                0x00000388                __vector_7
  .text.__vector_8
-                0x00000470       0x48 InterruptVectorTable.o
-                0x00000470                __vector_8
+                0x000003d0       0x48 InterruptVectorTable.o
+                0x000003d0                __vector_8
  .text.__vector_9
-                0x000004b8       0x48 InterruptVectorTable.o
-                0x000004b8                __vector_9
+                0x00000418       0x48 InterruptVectorTable.o
+                0x00000418                __vector_9
  .text.__vector_10
-                0x00000500       0x48 InterruptVectorTable.o
-                0x00000500                __vector_10
+                0x00000460       0x48 InterruptVectorTable.o
+                0x00000460                __vector_10
  .text.__vector_11
-                0x00000548       0x48 InterruptVectorTable.o
-                0x00000548                __vector_11
+                0x000004a8       0x48 InterruptVectorTable.o
+                0x000004a8                __vector_11
  .text.__vector_12
-                0x00000590       0x48 InterruptVectorTable.o
-                0x00000590                __vector_12
+                0x000004f0       0x48 InterruptVectorTable.o
+                0x000004f0                __vector_12
  .text.__vector_13
-                0x000005d8       0x48 InterruptVectorTable.o
-                0x000005d8                __vector_13
+                0x00000538       0x48 InterruptVectorTable.o
+                0x00000538                __vector_13
  .text.__vector_14
-                0x00000620       0x48 InterruptVectorTable.o
-                0x00000620                __vector_14
+                0x00000580       0x48 InterruptVectorTable.o
+                0x00000580                __vector_14
  .text.__vector_15
-                0x00000668       0x48 InterruptVectorTable.o
-                0x00000668                __vector_15
+                0x000005c8       0x48 InterruptVectorTable.o
+                0x000005c8                __vector_15
  .text.__vector_16
-                0x000006b0       0x48 InterruptVectorTable.o
-                0x000006b0                __vector_16
+                0x00000610       0x48 InterruptVectorTable.o
+                0x00000610                __vector_16
  .text.__vector_17
-                0x000006f8       0x48 InterruptVectorTable.o
-                0x000006f8                __vector_17
+                0x00000658       0x48 InterruptVectorTable.o
+                0x00000658                __vector_17
  .text.__vector_18
-                0x00000740       0x48 InterruptVectorTable.o
-                0x00000740                __vector_18
+                0x000006a0       0x48 InterruptVectorTable.o
+                0x000006a0                __vector_18
  .text.__vector_19
-                0x00000788       0x48 InterruptVectorTable.o
-                0x00000788                __vector_19
+                0x000006e8       0x48 InterruptVectorTable.o
+                0x000006e8                __vector_19
  .text.__vector_20
-                0x000007d0       0x48 InterruptVectorTable.o
-                0x000007d0                __vector_20
+                0x00000730       0x48 InterruptVectorTable.o
+                0x00000730                __vector_20
  .text.DIO_PinInit
-                0x00000818      0x11c DIO_DRIVER.o
-                0x00000818                DIO_PinInit
+                0x00000778      0x11c DIO_DRIVER.o
+                0x00000778                DIO_PinInit
  .text.DIO_PinEnablePullUp
-                0x00000934       0xb6 DIO_DRIVER.o
-                0x00000934                DIO_PinEnablePullUp
+                0x00000894       0xb6 DIO_DRIVER.o
+                0x00000894                DIO_PinEnablePullUp
  .text.DIO_TogPinVal
-                0x000009ea      0x102 DIO_DRIVER.o
-                0x000009ea                DIO_TogPinVal
- .text.task1    0x00000aec       0x22 main.o
-                0x00000aec                task1
- .text.main     0x00000b0e       0x4a main.o
-                0x00000b0e                main
-                0x00000b58                . = ALIGN (0x2)
+                0x0000094a      0x102 DIO_DRIVER.o
+                0x0000094a                DIO_TogPinVal
+ .text.task1    0x00000a4c       0x22 main.o
+                0x00000a4c                task1
+ .text.main     0x00000a6e       0x4a main.o
+                0x00000a6e                main
+                0x00000ab8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000b58        0x0 c:/users/vetmo/downloads/ahmed/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000b58                _exit
-                0x00000b58                exit
+ .fini9         0x00000ab8        0x0 c:/users/vetmo/downloads/ahmed/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000ab8                _exit
+                0x00000ab8                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -415,11 +415,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000b58        0x4 c:/users/vetmo/downloads/ahmed/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000ab8        0x4 c:/users/vetmo/downloads/ahmed/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000b5c                _etext = .
+                0x00000abc                _etext = .
 
-.data           0x00800060        0x0 load address 0x00000b5c
+.data           0x00800060        0x0 load address 0x00000abc
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -437,13 +437,12 @@ END GROUP
  *(.bss*)
  .bss.FunctionHandler
                 0x00800060       0x28 InterruptHandler.o
-                0x00800060                FunctionHandler
  .bss.counter   0x00800088        0x1 main.o
                 0x00800088                counter
  *(COMMON)
                 0x00800089                PROVIDE (__bss_end, .)
-                0x00000b5c                __data_load_start = LOADADDR (.data)
-                0x00000b5c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000abc                __data_load_start = LOADADDR (.data)
+                0x00000abc                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800089        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -531,21 +530,21 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1119
+.debug_info     0x00000000     0x110e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Users/vetmo/Downloads/Ahmed/Atmel/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6      0x2c3 InterruptHandler.o
- .debug_info    0x000007a9      0x405 InterruptVectorTable.o
- .debug_info    0x00000bae      0x3b8 DIO_DRIVER.o
- .debug_info    0x00000f66      0x1b3 main.o
+ .debug_info    0x000004e6      0x2b8 InterruptHandler.o
+ .debug_info    0x0000079e      0x405 InterruptVectorTable.o
+ .debug_info    0x00000ba3      0x3b8 DIO_DRIVER.o
+ .debug_info    0x00000f5b      0x1b3 main.o
 
-.debug_abbrev   0x00000000      0x764
+.debug_abbrev   0x00000000      0x75b
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Users/vetmo/Downloads/Ahmed/Atmel/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_abbrev  0x000004a3       0xd8 InterruptHandler.o
- .debug_abbrev  0x0000057b       0x58 InterruptVectorTable.o
- .debug_abbrev  0x000005d3       0xda DIO_DRIVER.o
- .debug_abbrev  0x000006ad       0xb7 main.o
+ .debug_abbrev  0x000004a3       0xcf InterruptHandler.o
+ .debug_abbrev  0x00000572       0x58 InterruptVectorTable.o
+ .debug_abbrev  0x000005ca       0xda DIO_DRIVER.o
+ .debug_abbrev  0x000006a4       0xb7 main.o
 
 .debug_line     0x00000000      0xf1e
  *(.debug_line .debug_line.* .debug_line_end)

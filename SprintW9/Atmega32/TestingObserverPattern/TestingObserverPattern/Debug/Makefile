@@ -38,7 +38,10 @@ SUBDIRS :=
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../../../Design\ Pattern/Observer\ Pattern/OBSERVER.c \
-../main.c
+../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO/DIO_DRIVER.c \
+../LED.c \
+../main.c \
+../PUSHBUTTON.c
 
 
 PREPROCESSING_SRCS += 
@@ -49,19 +52,31 @@ ASM_SRCS +=
 
 OBJS +=  \
 OBSERVER.o \
-main.o
+DIO_DRIVER.o \
+LED.o \
+main.o \
+PUSHBUTTON.o
 
 OBJS_AS_ARGS +=  \
 OBSERVER.o \
-main.o
+DIO_DRIVER.o \
+LED.o \
+main.o \
+PUSHBUTTON.o
 
 C_DEPS +=  \
 OBSERVER.d \
-main.d
+DIO_DRIVER.d \
+LED.d \
+main.d \
+PUSHBUTTON.d
 
 C_DEPS_AS_ARGS +=  \
 OBSERVER.d \
-main.d
+DIO_DRIVER.d \
+LED.d \
+main.d \
+PUSHBUTTON.d
 
 OUTPUT_FILE_PATH +=TestingObserverPattern.elf
 
@@ -80,14 +95,35 @@ LINKER_SCRIPT_DEP+=
 ./OBSERVER.o: ../../../Design\ Pattern/Observer\ Pattern/OBSERVER.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB" -I"../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO" -I"../../../Design Pattern/Observer Pattern"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./DIO_DRIVER.o: ../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO/DIO_DRIVER.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB" -I"../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO" -I"../../../Design Pattern/Observer Pattern"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./LED.o: .././LED.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB" -I"../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO" -I"../../../Design Pattern/Observer Pattern"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./main.o: .././main.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB" -I"../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO" -I"../../../Design Pattern/Observer Pattern"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./PUSHBUTTON.o: .././PUSHBUTTON.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../../../DIO_DRIVER_switch_led_toggle/Infrastructure/LIB" -I"../../../DIO_DRIVER_switch_led_toggle/Mcal/DIO" -I"../../../Design Pattern/Observer Pattern"  -O0 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Users\vetmo\Downloads\Ahmed\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 

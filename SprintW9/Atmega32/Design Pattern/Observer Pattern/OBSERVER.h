@@ -10,12 +10,13 @@
 typedef struct STR_Datum_t{
 	/*Shared Data*/
 	uint8_t Old_State;
+	uint8_t New_State;
 }STR_Datum_t;
 
 /*Notifier's structure (Class)*/
 typedef struct STR_Notifier_t{
 	/*Inherits structure of shared Data*/
-	STR_Datum_t* ObservableData;
+	STR_Datum_t ObservableData;
 	/*array of pointers to functions that are used to access the shared data*/
 	void (*acceptHandler[MAX_SUBSCRIBERS])(STR_Datum_t* Data);
 	/*variable that holds position of last element in the array of pointers to functions*/

@@ -4,7 +4,7 @@
  * Created: 8/21/2021 02:43:40 PM
  *  Author: Ahmed Essam
  */
-
+ 
 #ifndef __OBSERVER_INTERFACE_H__
 #define __OBSERVER_INTERFACE_H__
 

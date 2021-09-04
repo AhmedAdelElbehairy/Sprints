@@ -1,5 +1,5 @@
 #include "../../INFRASTRUCTURE/LIB/STD_TYPES.h"
-#include "../../INFRASTRUCTURE/LIB/Bit Operations.h"
+#include "../../INFRASTRUCTURE/LIB/Bit_Operations.h"
 #include "../DIO/DIO_DRIVER_TypeDef.h"
 #include "../DIO/DIO_DRIVER.h"
 #include "../DIO/DIO_DRIVER_Priv.h"

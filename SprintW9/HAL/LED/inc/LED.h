@@ -2,13 +2,15 @@
  * LED.h
  *
  *  Created on: Jul 12, 2021
- *      Author: zoldeyck
+ *      Author: Ahmed Adel
  */
 
 #ifndef HAL_LED_LED_H_
 #define HAL_LED_LED_H_
 
-void led_init(DIO_PORT_ID_t port, DIO_PIN_ID_t pin);
-void led_togling(DIO_PORT_ID_t port, DIO_PIN_ID_t pin);
+#include "DIO.h"
+
+void LED_Init(uint8_t port, uint8_t pin);
+void LED_Toggle(uint8_t port, uint8_t pin);
 
 #endif /* HAL_LED_LED_H_ */

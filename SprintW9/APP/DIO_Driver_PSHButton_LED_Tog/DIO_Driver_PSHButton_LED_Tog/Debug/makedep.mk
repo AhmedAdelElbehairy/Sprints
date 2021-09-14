@@ -6,6 +6,8 @@
 
 ..\..\..\HAL\LED\src\LED.c
 
+..\..\..\HAL\PUSHBUTTON\src\PUSHBUTTON.c
+
 ..\..\..\LIB\src\UTILS.c
 
 APP\src\APP.c

@@ -2,17 +2,21 @@
  * PushButton.h
  *
  *  Created on: Jul 11, 2021
- *      Author: zoldeyck
+ *      Author: Ahmed Adel
  */
 
 #ifndef HAL_PUSHBUTTON_PUSHBUTTON_H_
-	#define HAL_PUSHBUTTON_PUSHBUTTON_H_
+#define HAL_PUSHBUTTON_PUSHBUTTON_H_
 
-	PSHBTTN_ERROR_RETVAL_t PSHBTTN_Init (DIO_PORT_ID_t port, DIO_PIN_ID_t pin, PSHBTTN_PULLUP_Status_t status);
-	PSHBTTN_ERROR_RETVAL_t PSHBTTN_EnablePullUp (DIO_PORT_ID_t port, DIO_PIN_ID_t pin);
-	Byte PSHBTTN_Status (DIO_PORT_ID_t port, DIO_PIN_ID_t pin);
+#include "DIO.h"
 
-#define PULLED_UP 0
-#define PULLED_DWN 1
+#define PULLED_UP	(uint8_t)(0)
+#define PULLED_DWN	(uint8_t)(1)
+
+uint8_t PSHBTTN_Init (uint8_t port, uint8_t pin, uint8_t status);
+uint8_t PSHBTTN_EnablePullUp (uint8_t port, uint8_t pin);
+uint8_t PSHBTTN_Status (uint8_t port, uint8_t pin, uint8_t* status);
+
+
 
 #endif /* HAL_PUSHBUTTON_PUSHBUTTON_H_ */

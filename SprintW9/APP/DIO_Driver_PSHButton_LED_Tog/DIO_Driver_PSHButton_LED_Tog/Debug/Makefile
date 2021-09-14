@@ -56,6 +56,7 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../../../../Atmega32/DIO/src/DIO.c \
 ../../../../HAL/LED/src/LED.c \
+../../../../HAL/PUSHBUTTON/src/PUSHBUTTON.c \
 ../../../../LIB/src/UTILS.c \
 ../APP/src/APP.c \
 ../main.c
@@ -70,6 +71,7 @@ ASM_SRCS +=
 OBJS +=  \
 MCAL/DIO/src/DIO.o \
 HAL/LED/src/LED.o \
+HAL/PUSHBUTTON/src/PUSHBUTTON.o \
 LIB/src/UTILS.o \
 APP/src/APP.o \
 main.o
@@ -77,6 +79,7 @@ main.o
 OBJS_AS_ARGS +=  \
 MCAL/DIO/src/DIO.o \
 HAL/LED/src/LED.o \
+HAL/PUSHBUTTON/src/PUSHBUTTON.o \
 LIB/src/UTILS.o \
 APP/src/APP.o \
 main.o
@@ -84,6 +87,7 @@ main.o
 C_DEPS +=  \
 MCAL/DIO/src/DIO.d \
 HAL/LED/src/LED.d \
+HAL/PUSHBUTTON/src/PUSHBUTTON.d \
 LIB/src/UTILS.d \
 APP/src/APP.d \
 main.d
@@ -91,6 +95,7 @@ main.d
 C_DEPS_AS_ARGS +=  \
 MCAL/DIO/src/DIO.d \
 HAL/LED/src/LED.d \
+HAL/PUSHBUTTON/src/PUSHBUTTON.d \
 LIB/src/UTILS.d \
 APP/src/APP.d \
 main.d
@@ -117,6 +122,13 @@ MCAL/DIO/src/DIO.o: ../../../../Atmega32/DIO/src/DIO.c
 	
 
 HAL/LED/src/LED.o: ../../../../HAL/LED/src/LED.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)E:\New folder\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"E:\New folder\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../APP/inc" -I"../../../../LIB/inc" -I"../../../../HAL/LED/inc" -I"../../../../HAL/PushButton/inc" -I"../../../../Atmega32/DIO/inc"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "E:\New folder\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+HAL/PUSHBUTTON/src/PUSHBUTTON.o: ../../../../HAL/PUSHBUTTON/src/PUSHBUTTON.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)E:\New folder\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"E:\New folder\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"../APP/inc" -I"../../../../LIB/inc" -I"../../../../HAL/LED/inc" -I"../../../../HAL/PushButton/inc" -I"../../../../Atmega32/DIO/inc"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "E:\New folder\Atmel\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

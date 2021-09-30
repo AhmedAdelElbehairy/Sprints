@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.2.313/W64 for ARM                  30/Sep/2021  14:18:06
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  30/Sep/2021  15:47:03
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =
@@ -10,7 +10,10 @@
 #    Command line =
 #        -f
 #        E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Exe\InterruptController.out.rsp
-#        (E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\main.o
+#        (E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\CPU_Driver\CPU.o
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\INTCTRL\INTCTRL.o
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\INTCTRL\INTCTRL_Lcfg.o
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\main.o
 #        --no_out_extension -o
 #        E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Exe\InterruptController.out
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
@@ -51,39 +54,55 @@ define block HEAP with size = 8K, alignment = 8 { };
 "P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
           rw, block CSTACK, block HEAP };
 
-No sections matched the following patterns:
+  Section          Kind         Address    Size  Object
+  -------          ----         -------    ----  ------
+"A0":                                      0x40
+  .intvec          ro code          0x0    0x40  vector_table_M.o [5]
+                                 - 0x40    0x40
 
-  rw  in "P2"
+"P1":                                     0x10c
+  .text            ro code         0x40    0x38  zero_init3.o [5]
+  .text            ro code         0x78    0x34  CPU.o [2]
+  .text            ro code         0xac    0x28  data_init.o [5]
+  .iar.init_table  const           0xd4    0x10  - Linker created -
+  .text            ro code         0xe4    0x1e  cmain.o [5]
+  .text            ro code        0x102     0x4  low_level_init.o [4]
+  .text            ro code        0x106     0x4  main.o [1]
+  .text            ro code        0x10a     0x4  exit.o [4]
+  .text            ro code        0x10e     0x2  vectortrap_M.o [5]
+  .text            ro code        0x110     0xa  cexit.o [5]
+  .text            ro code        0x11c    0x14  exit.o [6]
+  .text            ro code        0x130    0x1c  cstartup_M.o [5]
+  .rodata          const          0x14c     0x0  zero_init3.o [5]
+                                - 0x14c   0x10c
 
+"P2", part 1 of 2:                          0x4
+  .bss             zero     0x2000'0000     0x1  CPU.o [2]
+                          - 0x2000'0001     0x1
 
-  Section   Kind         Address    Size  Object
-  -------   ----         -------    ----  ------
-"A0":                               0x40
-  .intvec   ro code          0x0    0x40  vector_table_M.o [3]
-                          - 0x40    0x40
-
-"P1":                               0x68
-  .text     ro code         0x40    0x1e  cmain.o [3]
-  .text     ro code         0x5e     0x4  low_level_init.o [2]
-  .text     ro code         0x62     0x4  main.o [1]
-  .text     ro code         0x66     0x4  exit.o [2]
-  .text     ro code         0x6a     0x2  vectortrap_M.o [3]
-  .text     ro code         0x6c     0xa  cexit.o [3]
-  .text     ro code         0x78    0x14  exit.o [4]
-  .text     ro code         0x8c    0x1c  cstartup_M.o [3]
-                          - 0xa8    0x68
-
-"P2":                             0x1000
-  CSTACK             0x2000'0000  0x1000  <Block>
-    CSTACK  uninit   0x2000'0000  0x1000  <Block tail>
-                   - 0x2000'1000  0x1000
+"P2", part 2 of 2:                       0x1000
+  CSTACK                    0x2000'0008  0x1000  <Block>
+    CSTACK         uninit   0x2000'0008  0x1000  <Block tail>
+                          - 0x2000'1008  0x1000
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-         0xa8     0x3'ffff  0x3'ff58
-  0x2000'1000  0x2000'7fff    0x7000
+        0x14c     0x3'ffff  0x3'feb4
+  0x2000'0004  0x2000'0007       0x4
+  0x2000'1008  0x2000'7fff    0x6ff8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1:
+          0x2000'0000   0x1
 
 
 
@@ -91,81 +110,100 @@ Unused ranges:
 *** MODULE SUMMARY
 ***
 
-    Module            ro code  rw data
-    ------            -------  -------
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
 command line/config:
-    ----------------------------------
+    -------------------------------------------
     Total:
 
 E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj: [1]
     main.o                  4
-    ----------------------------------
+    -------------------------------------------
     Total:                  4
 
-dl7M_tln.a: [2]
+E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\CPU_Driver: [2]
+    CPU.o                  52                 1
+    -------------------------------------------
+    Total:                 52                 1
+
+E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\INTCTRL: [3]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [4]
     exit.o                  4
     low_level_init.o        4
-    ----------------------------------
+    -------------------------------------------
     Total:                  8
 
-rt7M_tl.a: [3]
+rt7M_tl.a: [5]
     cexit.o                10
     cmain.o                30
     cstartup_M.o           28
+    data_init.o            40
     vector_table_M.o       64
     vectortrap_M.o          2
-    ----------------------------------
-    Total:                134
+    zero_init3.o           56
+    -------------------------------------------
+    Total:                230
 
-shb_l.a: [4]
+shb_l.a: [6]
     exit.o                 20
-    ----------------------------------
+    -------------------------------------------
     Total:                 20
 
     Gaps                    2
-    Linker created               4'096
---------------------------------------
-    Grand Total:          168    4'096
+    Linker created                  16    4'096
+-----------------------------------------------
+    Grand Total:          316       16    4'097
 
 
 *******************************************************************************
 *** ENTRY LIST
 ***
 
-Entry                     Address  Size  Type      Object
------                     -------  ----  ----      ------
-?main                        0x41        Code  Gb  cmain.o [3]
-BusFault_Handler             0x6b        Code  Wk  vectortrap_M.o [3]
-CSTACK$$Base          0x2000'0000         --   Gb  - Linker created -
-CSTACK$$Limit         0x2000'1000         --   Gb  - Linker created -
-DebugMon_Handler             0x6b        Code  Wk  vectortrap_M.o [3]
-HardFault_Handler            0x6b        Code  Wk  vectortrap_M.o [3]
-MemManage_Handler            0x6b        Code  Wk  vectortrap_M.o [3]
-NMI_Handler                  0x6b        Code  Wk  vectortrap_M.o [3]
-PendSV_Handler               0x6b        Code  Wk  vectortrap_M.o [3]
-Region$$Table$$Base           0x0         --   Gb  - Linker created -
-Region$$Table$$Limit          0x0         --   Gb  - Linker created -
-SVC_Handler                  0x6b        Code  Wk  vectortrap_M.o [3]
-SysTick_Handler              0x6b        Code  Wk  vectortrap_M.o [3]
-UsageFault_Handler           0x6b        Code  Wk  vectortrap_M.o [3]
-__cmain                      0x41        Code  Gb  cmain.o [3]
-__exit                       0x79  0x14  Code  Gb  exit.o [4]
-__iar_program_start          0x8d        Code  Gb  cstartup_M.o [3]
-__low_level_init             0x5f   0x4  Code  Gb  low_level_init.o [2]
-__vector_table                0x0        Data  Gb  vector_table_M.o [3]
-_call_main                   0x4d        Code  Gb  cmain.o [3]
-_exit                        0x6d        Code  Gb  cexit.o [3]
-exit                         0x67   0x4  Code  Gb  exit.o [2]
-main                         0x63   0x4  Code  Gb  main.o [1]
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base          0xd4         --   Gb  - Linker created -
+.iar.init_table$$Limit         0xe4         --   Gb  - Linker created -
+?main                          0xe5        Code  Gb  cmain.o [5]
+BusFault_Handler              0x10f        Code  Wk  vectortrap_M.o [5]
+CPU_Mode                0x2000'0000   0x1  Data  Lc  CPU.o [2]
+CSTACK$$Base            0x2000'0008         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1008         --   Gb  - Linker created -
+DebugMon_Handler              0x10f        Code  Wk  vectortrap_M.o [5]
+HardFault_Handler             0x10f        Code  Wk  vectortrap_M.o [5]
+MemManage_Handler             0x10f        Code  Wk  vectortrap_M.o [5]
+NMI_Handler                   0x10f        Code  Wk  vectortrap_M.o [5]
+PendSV_Handler                0x10f        Code  Wk  vectortrap_M.o [5]
+Region$$Table$$Base            0xd4         --   Gb  - Linker created -
+Region$$Table$$Limit           0xe4         --   Gb  - Linker created -
+SVC_Handler                    0x79  0x30  Code  Gb  CPU.o [2]
+SysTick_Handler               0x10f        Code  Wk  vectortrap_M.o [5]
+UsageFault_Handler            0x10f        Code  Wk  vectortrap_M.o [5]
+__cmain                        0xe5        Code  Gb  cmain.o [5]
+__exit                        0x11d  0x14  Code  Gb  exit.o [6]
+__iar_data_init3               0xad  0x28  Code  Gb  data_init.o [5]
+__iar_program_start           0x131        Code  Gb  cstartup_M.o [5]
+__iar_zero_init3               0x41  0x38  Code  Gb  zero_init3.o [5]
+__low_level_init              0x103   0x4  Code  Gb  low_level_init.o [4]
+__vector_table                  0x0        Data  Gb  vector_table_M.o [5]
+_call_main                     0xf1        Code  Gb  cmain.o [5]
+_exit                         0x111        Code  Gb  cexit.o [5]
+exit                          0x10b   0x4  Code  Gb  exit.o [4]
+main                          0x107   0x4  Code  Gb  main.o [1]
 
 
 [1] = E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj
-[2] = dl7M_tln.a
-[3] = rt7M_tl.a
-[4] = shb_l.a
+[2] = E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\CPU_Driver
+[3] = E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\Obj\INTCTRL
+[4] = dl7M_tln.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
 
-    168 bytes of readonly  code memory
-  4'096 bytes of readwrite data memory
+    316 bytes of readonly  code memory
+     16 bytes of readonly  data memory
+  4'097 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

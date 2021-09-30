@@ -337,6 +337,7 @@
                     <name>CCIncludePath2</name>
                     <state>E:\New folder\IAR Systems\Embedded Workbench 9.0\arm\inc\TexasInstruments</state>
                     <state>E:\New folder\IAR Systems\Embedded Workbench 9.0\arm\CMSIS\Core\Include</state>
+                    <state>E:\Repos\Sprints\SprintW9\ARM_Master_Class\CPU_DriverAndCommonFolder\CPU</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -745,7 +746,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state></state>
+                    <state>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -805,7 +806,7 @@
                 </option>
                 <option>
                     <name>IlinkProgramEntryLabel</name>
-                    <state></state>
+                    <state>__iar_program_start</state>
                 </option>
                 <option>
                     <name>DoFill</name>
@@ -978,7 +979,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>###Unitialized###</state>
+                    <state>InterruptController_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -2086,6 +2087,30 @@
             </data>
         </settings>
     </configuration>
+    <group>
+        <name>CPU_Driver</name>
+        <file>
+            <name>$PROJ_DIR$\..\CPU_DriverAndCommonFolder\CPU\CPU.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\CPU_DriverAndCommonFolder\CPU\CPU.h</name>
+        </file>
+    </group>
+    <group>
+        <name>INTCTRL</name>
+        <file>
+            <name>$PROJ_DIR$\INTCTRL\INTCTRL.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\INTCTRL\INTCTRL.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\INTCTRL\INTCTRL_Cfg.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\INTCTRL\INTCTRL_Lcfg.c</name>
+        </file>
+    </group>
     <file>
         <name>$PROJ_DIR$\main.c</name>
     </file>

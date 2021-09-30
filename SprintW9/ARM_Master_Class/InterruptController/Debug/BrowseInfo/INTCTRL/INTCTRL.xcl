@@ -1,15 +1,15 @@
-"E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\main.c"
+"E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\INTCTRL\INTCTRL.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\BrowseInfo\main.pbi.dep
+E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\BrowseInfo\INTCTRL\INTCTRL.pbi.dep
 -o
-E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\BrowseInfo\main.pbi
+E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\Debug\BrowseInfo\INTCTRL\INTCTRL.pbi
 -I
-E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController
+E:\Repos\Sprints\SprintW9\ARM_Master_Class\InterruptController\INTCTRL
 -I
 E:\New folder\IAR Systems\Embedded Workbench 9.0\arm\inc\TexasInstruments\
 -I

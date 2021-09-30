@@ -2839,6 +2839,30 @@
             </data>
         </settings>
     </configuration>
+    <group>
+        <name>CPU_Driver</name>
+        <file>
+            <name>$PROJ_DIR$\..\CPU_DriverAndCommonFolder\CPU\CPU.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\CPU_DriverAndCommonFolder\CPU\CPU.h</name>
+        </file>
+    </group>
+    <group>
+        <name>INTCTRL</name>
+        <file>
+            <name>$PROJ_DIR$\INTCTRL\INTCTRL.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\INTCTRL\INTCTRL.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\INTCTRL\INTCTRL_Cfg.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\INTCTRL\INTCTRL_Lcfg.c</name>
+        </file>
+    </group>
     <file>
         <name>$PROJ_DIR$\main.c</name>
     </file>

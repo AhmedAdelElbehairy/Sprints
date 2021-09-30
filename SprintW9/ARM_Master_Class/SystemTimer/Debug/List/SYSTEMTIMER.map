@@ -1,0 +1,188 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  28/Sep/2021  16:46:21
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Exe\SYSTEMTIMER.out
+#    Map file     =
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\List\SYSTEMTIMER.map
+#    Command line =
+#        -f
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Exe\SYSTEMTIMER.out.rsp
+#        (E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Obj\main.o
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Obj\SYSTEMTIMER\SYSTEMTIMER.o
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Obj\SYSTEMTIMER\SYSTEMTIMER_Lcfg.o
+#        --no_out_extension -o
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Exe\SYSTEMTIMER.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\List\SYSTEMTIMER.map
+#        --config "E:\New folder\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address    Size  Object
+  -------   ----         -------    ----  ------
+"A0":                               0x40
+  .intvec   ro code          0x0    0x40  vector_table_M.o [4]
+                          - 0x40    0x40
+
+"P1":                               0xf0
+  .text     ro code         0x40    0x78  SYSTEMTIMER.o [2]
+  .text     ro code         0xb8    0x1e  cmain.o [4]
+  .text     ro code         0xd6     0x4  low_level_init.o [3]
+  .text     ro code         0xda     0xa  main.o [1]
+  .text     ro code         0xe4     0x4  exit.o [3]
+  .text     ro code         0xe8     0xa  cexit.o [4]
+  .text     ro code         0xf2     0x2  vectortrap_M.o [4]
+  .text     ro code         0xf4    0x14  exit.o [5]
+  .text     ro code        0x108    0x1c  cstartup_M.o [4]
+  .rodata   const          0x124     0x4  SYSTEMTIMER_Lcfg.o [2]
+  .rodata   const          0x128     0x4  SYSTEMTIMER_Lcfg.o [2]
+  .rodata   const          0x12c     0x4  SYSTEMTIMER_Lcfg.o [2]
+                         - 0x130    0xf0
+
+"P2":                             0x1000
+  CSTACK             0x2000'0000  0x1000  <Block>
+    CSTACK  uninit   0x2000'0000  0x1000  <Block tail>
+                   - 0x2000'1000  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x130     0x3'ffff  0x3'fed0
+  0x2000'1000  0x2000'7fff    0x7000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module              ro code  ro data  rw data
+    ------              -------  -------  -------
+command line/config:
+    ---------------------------------------------
+    Total:
+
+E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Obj: [1]
+    main.o                   10
+    ---------------------------------------------
+    Total:                   10
+
+E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Obj\SYSTEMTIMER: [2]
+    SYSTEMTIMER.o           120
+    SYSTEMTIMER_Lcfg.o                12
+    ---------------------------------------------
+    Total:                  120       12
+
+dl7M_tln.a: [3]
+    exit.o                    4
+    low_level_init.o          4
+    ---------------------------------------------
+    Total:                    8
+
+rt7M_tl.a: [4]
+    cexit.o                  10
+    cmain.o                  30
+    cstartup_M.o             28
+    vector_table_M.o         64
+    vectortrap_M.o            2
+    ---------------------------------------------
+    Total:                  134
+
+shb_l.a: [5]
+    exit.o                   20
+    ---------------------------------------------
+    Total:                   20
+
+    Linker created                          4'096
+-------------------------------------------------
+    Grand Total:            292       12    4'096
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                     Address  Size  Type      Object
+-----                     -------  ----  ----      ------
+?main                        0xb9        Code  Gb  cmain.o [4]
+BusFault_Handler             0xf3        Code  Wk  vectortrap_M.o [4]
+CSTACK$$Base          0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit         0x2000'1000         --   Gb  - Linker created -
+DebugMon_Handler             0xf3        Code  Wk  vectortrap_M.o [4]
+HardFault_Handler            0xf3        Code  Wk  vectortrap_M.o [4]
+MemManage_Handler            0xf3        Code  Wk  vectortrap_M.o [4]
+NMI_Handler                  0xf3        Code  Wk  vectortrap_M.o [4]
+PendSV_Handler               0xf3        Code  Wk  vectortrap_M.o [4]
+Region$$Table$$Base           0x0         --   Gb  - Linker created -
+Region$$Table$$Limit          0x0         --   Gb  - Linker created -
+SVC_Handler                  0xf3        Code  Wk  vectortrap_M.o [4]
+SYSTEMTIMER_Init             0x41  0x78  Code  Gb  SYSTEMTIMER.o [2]
+SysTick_ClockSource         0x128   0x4  Data  Gb  SYSTEMTIMER_Lcfg.o [2]
+SysTick_Handler              0xf3        Code  Wk  vectortrap_M.o [4]
+SysTick_Interrupt           0x12c   0x4  Data  Gb  SYSTEMTIMER_Lcfg.o [2]
+SysTick_ReloadVal           0x124   0x4  Data  Gb  SYSTEMTIMER_Lcfg.o [2]
+UsageFault_Handler           0xf3        Code  Wk  vectortrap_M.o [4]
+__cmain                      0xb9        Code  Gb  cmain.o [4]
+__exit                       0xf5  0x14  Code  Gb  exit.o [5]
+__iar_program_start         0x109        Code  Gb  cstartup_M.o [4]
+__low_level_init             0xd7   0x4  Code  Gb  low_level_init.o [3]
+__vector_table                0x0        Data  Gb  vector_table_M.o [4]
+_call_main                   0xc5        Code  Gb  cmain.o [4]
+_exit                        0xe9        Code  Gb  cexit.o [4]
+exit                         0xe5   0x4  Code  Gb  exit.o [3]
+main                         0xdb   0xa  Code  Gb  main.o [1]
+
+
+[1] = E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Obj
+[2] = E:\Repos\Sprints\SprintW9\ARM_Master_Class\systemtimer\Debug\Obj\SYSTEMTIMER
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+    292 bytes of readonly  code memory
+     12 bytes of readonly  data memory
+  4'096 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

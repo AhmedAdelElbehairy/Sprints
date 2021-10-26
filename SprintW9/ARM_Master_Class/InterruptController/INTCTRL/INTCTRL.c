@@ -10,6 +10,12 @@
  *********************************************************************************************************************/
 #include "INTCTRL.h"
 
+
+
+/**********************************************************************************************************************
+*  LOCAL MACROS CONSTANT\FUNCTION
+*********************************************************************************************************************/
+//static void INTCTRL_SetPriority(uint8_t InterruptNum);
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION DEFINITIONS
  *********************************************************************************************************************/
@@ -33,6 +39,7 @@ void INTCTRL_Init(void)
   /*TODO: Setting the priorities and sub-priorities for each interrupt*/
   for(IteratorCfgArr = 0; IteratorCfgArr <= INTERRUPTS_NUMBER; IteratorCfgArr++)
   {
+    /*exception of constant priority whiose vector number less than 0*/
     if(aSTR_InterruptCfg[IteratorCfgArr].Exception_Vector_Number < 0)
     {
       /*TODO: Enable/disable the System's exceptions*/
@@ -68,12 +75,27 @@ void INTCTRL_Init(void)
         break;
       }
     }
+    /*exception of controllable priority whose vector number more than or equal 0*/
     else
     {
       /*TODO: Enable/disable the Peripheral's exceptions*/
-      NVIC->ISER[(aSTR_InterruptCfg[IteratorCfgArr].Exception_Vector_Number)/31] |= aSTR_InterruptCfg[IteratorCfgArr].Exception_State_Enabled_Disabled << (aSTR_InterruptCfg[IteratorCfgArr].Exception_Vector_Number)%31;
-      
+      NVIC->ISER[(aSTR_InterruptCfg[IteratorCfgArr].Exception_Vector_Number)/31] 
+        |= aSTR_InterruptCfg[IteratorCfgArr].Exception_State_Enabled_Disabled << (aSTR_InterruptCfg[IteratorCfgArr].Exception_Vector_Number)%31;
+      /*TODO : Assign the priority*/
+      *(volatile uint8_t*)(0xE000E400 + aSTR_InterruptCfg[IteratorCfgArr].Exception_Vector_Number) = (aSTR_InterruptCfg[IteratorCfgArr].Exception_Group_SubGroup_Priority[0]|aSTR_InterruptCfg[IteratorCfgArr].Exception_Group_SubGroup_Priority[1])<<5;
     }
   }
   /*TODO: (optional) switch to user mode*/
 }
+
+//static void INTCTRL_SetPriority(uint8_t InterruptNum)
+//{
+  
+//}
+
+
+
+
+
+
+

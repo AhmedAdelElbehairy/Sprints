@@ -14,4 +14,5 @@
  *********************************************************************************************************************/
 #include "INTCTRL_Cfg.h"
 const STR_InterruptCfg_t aSTR_InterruptCfg[INTERRUPTS_NUMBER] = 
-{{GPIOA_IRQn, INTERRUPT_ENABLED, {GROUP_PRIORITY_0,SUBGROUP_PRIORITY_0}}};
+{{GPIOA_IRQn, INTERRUPT_ENABLED, {GROUP_YYY_PRIORITY_0,SUBGROUP_YYY_PRIORITY_1}},
+{GPIOB_IRQn, INTERRUPT_ENABLED, {GROUP_YYY_PRIORITY_0,SUBGROUP_YYY_PRIORITY_7}}};

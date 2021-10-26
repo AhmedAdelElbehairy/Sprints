@@ -37907,7 +37907,7 @@
     "display": "void INTCTRL_Init(void)",
     "location": {
       "column": "6",
-      "line": "26",
+      "line": "32",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL.c"
     },
     "name": "INTCTRL_Init",
@@ -37915,13 +37915,13 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL.c@1599@F@INTCTRL_Init@IteratorCfgArr",
+    "ID": "c:INTCTRL.c@1937@F@INTCTRL_Init@IteratorCfgArr",
     "What": "Variable",
     "defdec": "Def",
     "display": "IteratorCfgArr",
     "location": {
       "column": "11",
-      "line": "28",
+      "line": "34",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL.c"
     },
     "name": "IteratorCfgArr",
@@ -37957,7 +37957,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1226@macro@VECTKEY",
+    "ID": "c:INTCTRL_Cfg.h@1227@macro@VECTKEY",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "VECTKEY",
@@ -37971,7 +37971,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1307@macro@PRI_GROUP_XXX",
+    "ID": "c:INTCTRL_Cfg.h@1344@macro@PRI_GROUP_XXX",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PRI_GROUP_XXX",
@@ -37985,7 +37985,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1361@macro@PRI_GROUP_XXY",
+    "ID": "c:INTCTRL_Cfg.h@1398@macro@PRI_GROUP_XXY",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PRI_GROUP_XXY",
@@ -37999,7 +37999,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1415@macro@PRI_GROUP_XYY",
+    "ID": "c:INTCTRL_Cfg.h@1452@macro@PRI_GROUP_XYY",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PRI_GROUP_XYY",
@@ -38013,7 +38013,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1469@macro@PRI_GROUP_YYY",
+    "ID": "c:INTCTRL_Cfg.h@1506@macro@PRI_GROUP_YYY",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PRI_GROUP_YYY",
@@ -38027,7 +38027,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1523@macro@PRI_GROUP",
+    "ID": "c:INTCTRL_Cfg.h@1560@macro@PRI_GROUP",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PRI_GROUP",
@@ -38041,7 +38041,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1613@macro@VECTKEY_WITH_PRIGROUP",
+    "ID": "c:INTCTRL_Cfg.h@1614@macro@VECTKEY_WITH_PRIGROUP",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "VECTKEY_WITH_PRIGROUP",
@@ -38055,7 +38055,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1682@macro@INTERRUPT_ENABLED",
+    "ID": "c:INTCTRL_Cfg.h@1712@macro@INTERRUPT_ENABLED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "INTERRUPT_ENABLED",
@@ -38069,7 +38069,7 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@1732@macro@INTERRUPT_DISABLED",
+    "ID": "c:INTCTRL_Cfg.h@1762@macro@INTERRUPT_DISABLED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "INTERRUPT_DISABLED",
@@ -38083,128 +38083,422 @@
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@2987@macro@SUBGROUP_PRIORITY_0",
+    "ID": "c:INTCTRL_Cfg.h@1820@macro@SUBGROUP_XXX_PRIORITY_0",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SUBGROUP_PRIORITY_0",
+    "display": "SUBGROUP_XXX_PRIORITY_0",
+    "location": {
+      "column": "13",
+      "line": "33",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "SUBGROUP_XXX_PRIORITY_0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@1872@macro@GROUP_XXX_PRIORITY_0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXX_PRIORITY_0",
+    "location": {
+      "column": "13",
+      "line": "34",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXX_PRIORITY_0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@1924@macro@GROUP_XXX_PRIORITY_1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXX_PRIORITY_1",
+    "location": {
+      "column": "13",
+      "line": "35",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXX_PRIORITY_1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@1976@macro@GROUP_XXX_PRIORITY_2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXX_PRIORITY_2",
+    "location": {
+      "column": "13",
+      "line": "36",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXX_PRIORITY_2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2028@macro@GROUP_XXX_PRIORITY_3",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXX_PRIORITY_3",
+    "location": {
+      "column": "13",
+      "line": "37",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXX_PRIORITY_3",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2080@macro@GROUP_XXX_PRIORITY_4",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXX_PRIORITY_4",
+    "location": {
+      "column": "13",
+      "line": "38",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXX_PRIORITY_4",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2132@macro@GROUP_XXX_PRIORITY_5",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXX_PRIORITY_5",
+    "location": {
+      "column": "13",
+      "line": "39",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXX_PRIORITY_5",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2184@macro@GROUP_XXX_PRIORITY_6",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXX_PRIORITY_6",
+    "location": {
+      "column": "13",
+      "line": "40",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXX_PRIORITY_6",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2236@macro@GROUP_XXX_PRIORITY_7",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXX_PRIORITY_7",
+    "location": {
+      "column": "13",
+      "line": "41",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXX_PRIORITY_7",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2290@macro@SUBGROUP_XXY_PRIORITY_0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SUBGROUP_XXY_PRIORITY_0",
+    "location": {
+      "column": "13",
+      "line": "43",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "SUBGROUP_XXY_PRIORITY_0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2342@macro@SUBGROUP_XXY_PRIORITY_1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SUBGROUP_XXY_PRIORITY_1",
+    "location": {
+      "column": "13",
+      "line": "44",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "SUBGROUP_XXY_PRIORITY_1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2394@macro@GROUP_XXY_PRIORITY_0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXY_PRIORITY_0",
+    "location": {
+      "column": "13",
+      "line": "45",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXY_PRIORITY_0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2446@macro@GROUP_XXY_PRIORITY_1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXY_PRIORITY_1",
+    "location": {
+      "column": "13",
+      "line": "46",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXY_PRIORITY_1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2498@macro@GROUP_XXY_PRIORITY_2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXY_PRIORITY_2",
+    "location": {
+      "column": "13",
+      "line": "47",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXY_PRIORITY_2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2550@macro@GROUP_XXY_PRIORITY_3",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XXY_PRIORITY_3",
+    "location": {
+      "column": "13",
+      "line": "48",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XXY_PRIORITY_3",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2604@macro@SUBGROUP_XYY_PRIORITY_0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SUBGROUP_XYY_PRIORITY_0",
+    "location": {
+      "column": "13",
+      "line": "50",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "SUBGROUP_XYY_PRIORITY_0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2656@macro@SUBGROUP_XYY_PRIORITY_1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SUBGROUP_XYY_PRIORITY_1",
+    "location": {
+      "column": "13",
+      "line": "51",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "SUBGROUP_XYY_PRIORITY_1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2708@macro@SUBGROUP_XYY_PRIORITY_2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SUBGROUP_XYY_PRIORITY_2",
+    "location": {
+      "column": "13",
+      "line": "52",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "SUBGROUP_XYY_PRIORITY_2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2760@macro@SUBGROUP_XYY_PRIORITY_3",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SUBGROUP_XYY_PRIORITY_3",
+    "location": {
+      "column": "13",
+      "line": "53",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "SUBGROUP_XYY_PRIORITY_3",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2812@macro@GROUP_XYY_PRIORITY_0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XYY_PRIORITY_0",
+    "location": {
+      "column": "13",
+      "line": "54",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XYY_PRIORITY_0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2864@macro@GROUP_XYY_PRIORITY_1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_XYY_PRIORITY_1",
+    "location": {
+      "column": "13",
+      "line": "55",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
+    },
+    "name": "GROUP_XYY_PRIORITY_1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:INTCTRL_Cfg.h@2918@macro@GROUP_YYY_PRIORITY_0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GROUP_YYY_PRIORITY_0",
     "location": {
       "column": "13",
       "line": "57",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "SUBGROUP_PRIORITY_0",
+    "name": "GROUP_YYY_PRIORITY_0",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@3035@macro@GROUP_PRIORITY_0",
+    "ID": "c:INTCTRL_Cfg.h@2970@macro@SUBGROUP_YYY_PRIORITY_0",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "GROUP_PRIORITY_0",
+    "display": "SUBGROUP_YYY_PRIORITY_0",
     "location": {
       "column": "13",
       "line": "58",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "GROUP_PRIORITY_0",
+    "name": "SUBGROUP_YYY_PRIORITY_0",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@3083@macro@SUBGROUP_PRIORITY_1",
+    "ID": "c:INTCTRL_Cfg.h@3022@macro@SUBGROUP_YYY_PRIORITY_1",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SUBGROUP_PRIORITY_1",
+    "display": "SUBGROUP_YYY_PRIORITY_1",
     "location": {
       "column": "13",
       "line": "59",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "SUBGROUP_PRIORITY_1",
+    "name": "SUBGROUP_YYY_PRIORITY_1",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@3131@macro@SUBGROUP_PRIORITY_2",
+    "ID": "c:INTCTRL_Cfg.h@3074@macro@SUBGROUP_YYY_PRIORITY_2",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SUBGROUP_PRIORITY_2",
+    "display": "SUBGROUP_YYY_PRIORITY_2",
     "location": {
       "column": "13",
       "line": "60",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "SUBGROUP_PRIORITY_2",
+    "name": "SUBGROUP_YYY_PRIORITY_2",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@3179@macro@SUBGROUP_PRIORITY_3",
+    "ID": "c:INTCTRL_Cfg.h@3126@macro@SUBGROUP_YYY_PRIORITY_3",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SUBGROUP_PRIORITY_3",
+    "display": "SUBGROUP_YYY_PRIORITY_3",
     "location": {
       "column": "13",
       "line": "61",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "SUBGROUP_PRIORITY_3",
+    "name": "SUBGROUP_YYY_PRIORITY_3",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@3227@macro@SUBGROUP_PRIORITY_4",
+    "ID": "c:INTCTRL_Cfg.h@3178@macro@SUBGROUP_YYY_PRIORITY_4",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SUBGROUP_PRIORITY_4",
+    "display": "SUBGROUP_YYY_PRIORITY_4",
     "location": {
       "column": "13",
       "line": "62",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "SUBGROUP_PRIORITY_4",
+    "name": "SUBGROUP_YYY_PRIORITY_4",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@3275@macro@SUBGROUP_PRIORITY_5",
+    "ID": "c:INTCTRL_Cfg.h@3230@macro@SUBGROUP_YYY_PRIORITY_5",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SUBGROUP_PRIORITY_5",
+    "display": "SUBGROUP_YYY_PRIORITY_5",
     "location": {
       "column": "13",
       "line": "63",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "SUBGROUP_PRIORITY_5",
+    "name": "SUBGROUP_YYY_PRIORITY_5",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@3323@macro@SUBGROUP_PRIORITY_6",
+    "ID": "c:INTCTRL_Cfg.h@3282@macro@SUBGROUP_YYY_PRIORITY_6",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SUBGROUP_PRIORITY_6",
+    "display": "SUBGROUP_YYY_PRIORITY_6",
     "location": {
       "column": "13",
       "line": "64",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "SUBGROUP_PRIORITY_6",
+    "name": "SUBGROUP_YYY_PRIORITY_6",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:INTCTRL_Cfg.h@3371@macro@SUBGROUP_PRIORITY_7",
+    "ID": "c:INTCTRL_Cfg.h@3334@macro@SUBGROUP_YYY_PRIORITY_7",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SUBGROUP_PRIORITY_7",
+    "display": "SUBGROUP_YYY_PRIORITY_7",
     "location": {
       "column": "13",
       "line": "65",
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
     },
-    "name": "SUBGROUP_PRIORITY_7",
+    "name": "SUBGROUP_YYY_PRIORITY_7",
     "origin": "user_include",
     "scope": null
   },
@@ -38281,20 +38575,6 @@
     "scope": null
   },
   {
-    "ID": "c:@aSTR_InterruptCfg",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "aSTR_InterruptCfg",
-    "location": {
-      "column": "33",
-      "line": "83",
-      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL_Cfg.h"
-    },
-    "name": "aSTR_InterruptCfg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:INTCTRL.h@564@macro@_INTCTRL_H_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -38319,6 +38599,20 @@
       "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL.h"
     },
     "name": "aSTR_InterruptCfg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@INTCTRL_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void INTCTRL_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "38",
+      "path": "E:\\Repos\\Sprints\\SprintW9\\ARM_Master_Class\\InterruptController\\INTCTRL\\INTCTRL.h"
+    },
+    "name": "INTCTRL_Init",
     "origin": "user_include",
     "scope": null
   },

@@ -1,0 +1,41 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\main.c -xcl_file E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.xcl -macro_file E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.tmp -icc_path "E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\main.c -o E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config "E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I "E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" -I "E$:\New$ folder\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\TexasInstruments\\" -Ol --predef_macros E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.tmp
+  rspfile_name = E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.xcl.rsp
+
+build E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.pbi : INDEXER E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.xcl |  $
+E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\main.c
+  flags = -out=E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.pbi -f E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.xcl
+
+build E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\GPTM.pbw : MAKEBROWSE E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\GPTM.pbd
+  flags = E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\GPTM.pbd -output E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\GPTM.pbw
+
+build E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\GPTM.pbd : PDBLINK E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.pbi
+  flags = -M E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\GPTM.pbd E$:\Repos\Sprints\SprintW9\ARM_Master_Class\GPTM\Debug\BrowseInfo\main.pbi
+

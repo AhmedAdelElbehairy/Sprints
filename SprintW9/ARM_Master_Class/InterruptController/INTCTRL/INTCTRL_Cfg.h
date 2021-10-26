@@ -17,53 +17,53 @@
 /**********************************************************************************************************************
  *  GLOBAL CONSTANT MACROS
  *********************************************************************************************************************/
-#define INTERRUPTS_NUMBER           (uint8_t)(1)
-#define VECTKEY                     (uint32_t)(0x05FA << SCB_AIRCR_VECTKEY_Pos)
+#define INTERRUPTS_NUMBER            (uint8_t)(2)
+#define VECTKEY                      (uint32_t)(0x05FA << SCB_AIRCR_VECTKEY_Pos) /*must be placed in comon folder*/
 #define PRI_GROUP_XXX                (uint32_t)(0x4)
 #define PRI_GROUP_XXY                (uint32_t)(0x5)
 #define PRI_GROUP_XYY                (uint32_t)(0x6)
 #define PRI_GROUP_YYY                (uint32_t)(0x7)
-#define PRI_GROUP                    (uint32_t)(PRI_GROUP_YYY << SCB_AIRCR_PRIGROUP_Pos)
-#define VECTKEY_WITH_PRIGROUP       (uint32_t)(VECTKEY|PRI_GROUP)
+#define PRI_GROUP                    (PRI_GROUP_YYY)
+#define VECTKEY_WITH_PRIGROUP        (uint32_t)(VECTKEY|(PRI_GROUP << SCB_AIRCR_PRIGROUP_Pos))
 
 #define INTERRUPT_ENABLED           (uint8_t)(1)
 #define INTERRUPT_DISABLED          (uint8_t)(0)
 
-#if (PRI_GROUP == PRI_GROUP_XXX << SCB_AIRCR_PRIGROUP_Pos)
-    #define SUBGROUP_PRIORITY_0     (uint8_t)0
-    #define GROUP_PRIORITY_0        (uint8_t)0
-    #define GROUP_PRIORITY_1        (uint8_t)1
-    #define GROUP_PRIORITY_2        (uint8_t)2
-    #define GROUP_PRIORITY_3        (uint8_t)3
-    #define GROUP_PRIORITY_4        (uint8_t)4
-    #define GROUP_PRIORITY_5        (uint8_t)5
-    #define GROUP_PRIORITY_6        (uint8_t)6
-    #define GROUP_PRIORITY_7        (uint8_t)7
-#elif (PRI_GROUP == PRI_GROUP_XXY << SCB_AIRCR_PRIGROUP_Pos)
-    #define SUBGROUP_PRIORITY_0     (uint8_t)0
-    #define GROUP_PRIORITY_0        (uint8_t)0
-    #define SUBGROUP_PRIORITY_1     (uint8_t)1
-    #define GROUP_PRIORITY_1        (uint8_t)1
-    #define GROUP_PRIORITY_2        (uint8_t)2
-    #define GROUP_PRIORITY_3        (uint8_t)3
-#elif (PRI_GROUP == PRI_GROUP_XYY << SCB_AIRCR_PRIGROUP_Pos)
-    #define SUBGROUP_PRIORITY_0     (uint8_t)0
-    #define GROUP_PRIORITY_0        (uint8_t)0
-    #define SUBGROUP_PRIORITY_1     (uint8_t)1
-    #define SUBGROUP_PRIORITY_2     (uint8_t)2
-    #define SUBGROUP_PRIORITY_3     (uint8_t)3
-    #define GROUP_PRIORITY_1        (uint8_t)1
-#else
-    #define SUBGROUP_PRIORITY_0     (uint8_t)0
-    #define GROUP_PRIORITY_0        (uint8_t)0
-    #define SUBGROUP_PRIORITY_1     (uint8_t)1
-    #define SUBGROUP_PRIORITY_2     (uint8_t)2
-    #define SUBGROUP_PRIORITY_3     (uint8_t)3
-    #define SUBGROUP_PRIORITY_4     (uint8_t)4
-    #define SUBGROUP_PRIORITY_5     (uint8_t)5
-    #define SUBGROUP_PRIORITY_6     (uint8_t)6
-    #define SUBGROUP_PRIORITY_7     (uint8_t)7
-#endif
+
+    #define SUBGROUP_XXX_PRIORITY_0     (uint8_t)0
+    #define GROUP_XXX_PRIORITY_0        (uint8_t)0
+    #define GROUP_XXX_PRIORITY_1        (uint8_t)1
+    #define GROUP_XXX_PRIORITY_2        (uint8_t)2
+    #define GROUP_XXX_PRIORITY_3        (uint8_t)3
+    #define GROUP_XXX_PRIORITY_4        (uint8_t)4
+    #define GROUP_XXX_PRIORITY_5        (uint8_t)5
+    #define GROUP_XXX_PRIORITY_6        (uint8_t)6
+    #define GROUP_XXX_PRIORITY_7        (uint8_t)7
+
+    #define SUBGROUP_XXY_PRIORITY_0     (uint8_t)0
+    #define SUBGROUP_XXY_PRIORITY_1     (uint8_t)1
+    #define GROUP_XXY_PRIORITY_0        (uint8_t)0
+    #define GROUP_XXY_PRIORITY_1        (uint8_t)1
+    #define GROUP_XXY_PRIORITY_2        (uint8_t)2
+    #define GROUP_XXY_PRIORITY_3        (uint8_t)3
+
+    #define SUBGROUP_XYY_PRIORITY_0     (uint8_t)0
+    #define SUBGROUP_XYY_PRIORITY_1     (uint8_t)1
+    #define SUBGROUP_XYY_PRIORITY_2     (uint8_t)2
+    #define SUBGROUP_XYY_PRIORITY_3     (uint8_t)3
+    #define GROUP_XYY_PRIORITY_0        (uint8_t)0
+    #define GROUP_XYY_PRIORITY_1        (uint8_t)1
+
+    #define GROUP_YYY_PRIORITY_0        (uint8_t)0
+    #define SUBGROUP_YYY_PRIORITY_0     (uint8_t)0
+    #define SUBGROUP_YYY_PRIORITY_1     (uint8_t)1
+    #define SUBGROUP_YYY_PRIORITY_2     (uint8_t)2
+    #define SUBGROUP_YYY_PRIORITY_3     (uint8_t)3
+    #define SUBGROUP_YYY_PRIORITY_4     (uint8_t)4
+    #define SUBGROUP_YYY_PRIORITY_5     (uint8_t)5
+    #define SUBGROUP_YYY_PRIORITY_6     (uint8_t)6
+    #define SUBGROUP_YYY_PRIORITY_7     (uint8_t)7
+
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION MACROS
  *********************************************************************************************************************/

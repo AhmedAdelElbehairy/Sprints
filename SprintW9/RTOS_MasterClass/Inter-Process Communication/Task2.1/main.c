@@ -185,10 +185,10 @@ void UART_String_1( void* parameter)
 			for(i = 0; i < 10; i++)
 			{
 				UART_SendString(String_1, 6);
+				for(dummy_load_count = 0; dummy_load_count < 100000; dummy_load_count++);
 			}
 			xSemaphoreGive(UART_1_Mutex);
 		}
-		for(dummy_load_count = 0; dummy_load_count < 100000; dummy_load_count++);
 		vTaskDelay(500);
 	}
 }

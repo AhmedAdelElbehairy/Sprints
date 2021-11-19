@@ -24,7 +24,11 @@
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION MACROS
  *********************************************************************************************************************/
-
+/**Atomic Operations**/
+#define SET_BIT_ATOMIC(REG,BIT) 	(*(volatile uint32_t*)(((((uint32_t)(&(REG))&0x0FFFFFFF)*0x20)+(BIT*4))+((uint32_t)(&(REG))&0xF0000000)+0x02000000) = 1)
+#define CLEAR_BIT_ATOMIC(REG,BIT) 	(*(volatile uint32_t*)(((((uint32_t)(&(REG))&0x0FFFFFFF)*0x20)+(BIT*4))+((uint32_t)(&(REG))&0xF0000000)+0x02000000) = 0)
+#define READ_BIT_ATOMIC(REG,BIT) 	(*(volatile uint32_t*)(((((uint32_t)(&(REG))&0x0FFFFFFF)*0x20)+(BIT*4))+((uint32_t)(&(REG))&0xF0000000)+0x02000000))
+#define TOG_BIT_ATOMIC(REG,BIT) 	(*(volatile uint32_t*)(((((uint32_t)(&(REG))&0x0FFFFFFF)*0x20)+(BIT*4))+((uint32_t)(&(REG))&0xF0000000)+0x02000000) ^= 1)
 
 /**********************************************************************************************************************
  *  GLOBAL DATA TYPES AND STRUCTURES

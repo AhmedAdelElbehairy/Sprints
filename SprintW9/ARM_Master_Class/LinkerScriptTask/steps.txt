@@ -1,0 +1,17 @@
+1- get object file for .c files and show their symbol table 
+2- show the map file
+3- add an array called sprinters in one of the c files and assign it to the memory section called sprints.
+4- show the object and map files again and compare them
+5- edit the linker script so as to have a section called sprints at which the sprints array is saved.
+6- show the map file again
+
+
+arm-none-eabi-gcc -mcpu=cortex-m4 -march=armv7e-m -save-temps -nostdlib -O0 -Wl,-Map,"Session_01.map" -Wl,-T"tm4c123gh6pm.lds" app_main.c app_2.c -o app_output1.elf
+int const Sprints[] __attribute__ ((section (".sprints")))= 
+{
+	10,20,30,50,80
+};
+PROVIDE (_sprints_base_address = 0x1000);
+.sprints (_sprints_base_address) : AT (_sprints_base_address) {
+		KEEP (*(.sprints))
+	} > FLASH

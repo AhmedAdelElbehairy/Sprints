@@ -1,0 +1,287 @@
+/*
+ * File Name: PORT.h
+ *
+ */ 
+
+#ifndef __PORT__
+#define __PORT__
+
+//FILES INCLUDING
+#include "TM4C123GH6PM.h"
+#include "CPU.h"
+extern volatile uint8_t number_of_elements_of_pin_configuration_array;
+//PORTS
+typedef enum PORT_PORT_t
+{
+	PORT_A = 0,
+	PORT_B = 1,
+	PORT_C = 2,
+	PORT_D = 3,
+	PORT_E = 4,
+	PORT_F = 5
+}PORT_PORT_t;
+
+//PINS
+typedef enum PORT_PIN_t
+{
+	PIN_A0 = 0,	
+	PIN_A1 = 1,
+	PIN_A2 = 2,
+	PIN_A3 = 3,
+	PIN_A4 = 4,
+	PIN_A5 = 5,
+	PIN_A6 = 6,
+	PIN_A7 = 7,
+	PIN_B0 = 8,	
+	PIN_B1 = 9,
+	PIN_B2 = 10,
+	PIN_B3 = 11,
+	PIN_B4 = 12,
+	PIN_B5 = 13,
+	PIN_B6 = 14,
+	PIN_B7 = 15,
+	PIN_C0 = 16,	/*JTAG/SWD SIGNALS writing Changing their functionality may lock the controller*/
+	PIN_C1 = 17, /*JTAG/SWD SIGNALS writing Changing their functionality may lock the controller*/
+	PIN_C2 = 18, /*JTAG/SWD SIGNALS writing Changing their functionality may lock the controller*/
+	PIN_C3 = 19, /*JTAG/SWD SIGNALS writing Changing their functionality may lock the controller*/
+	PIN_C4 = 20,
+	PIN_C5 = 21,
+	PIN_C6 = 22,
+	PIN_C7 = 23,
+	PIN_D0 = 24,	/*can be used as NMI need CR to be configured*/
+	PIN_D1 = 25,
+	PIN_D2 = 26,
+	PIN_D3 = 27,
+	PIN_D4 = 28,
+	PIN_D5 = 29,
+	PIN_D6 = 30,
+	PIN_D7 = 31,
+	PIN_E0 = 32,	
+	PIN_E1 = 33,
+	PIN_E2 = 34,
+	PIN_E3 = 35,
+	PIN_E4 = 36,
+	PIN_E5 = 37,
+	Reserved_0 = 38,
+	Reserved_1 = 39,
+	PIN_F0 = 40,	/*can be used as NMI need CR to be configured*/
+	PIN_F1 = 41,
+	PIN_F2 = 42,
+	PIN_F3 = 43,
+	PIN_F4 = 44,
+	Reserved_2 = 45,
+	Reserved_3 = 46,
+	Reserved_4 = 47,
+}PORT_PIN_t;
+typedef enum PORT_PIN_DIR_t
+{
+	PORT_PIN_IN = 0,
+	PORT_PIN_OUT = 1,
+	PORT_PIN_INVALID_DIR
+}PORT_PIN_DIR_t;
+typedef enum PORT_PIN_LEVEL_t
+{
+	PORT_PIN_LOW = 0,
+	PORT_PIN_HIGH = 1,
+	PORT_PIN_INVALID_LEVEL
+}PORT_PIN_LEVEL_t;
+typedef enum PORT_PIN_MODE_t
+{
+	/*PORTA*/
+	PIN_A0_U0Rx = 1,
+	PIN_A0_CAN1Rx = 8,
+	PIN_A1_U0Tx = 1,
+	PIN_A1_CAN1Tx = 8,
+	PIN_A2_SSI0Clk = 2,
+	PIN_A3_SSI0Fss = 2,
+	PIN_A4_SSI0Rx = 2,
+	PIN_A5_SSI0Tx = 2,
+	PIN_A6_I2C1SCL = 3,
+	PIN_A6_M1PWM2 = 5,
+	PIN_A7_I2C1SDA = 3,
+	PIN_A7_M1PWM3 = 5,
+	/*PORTB*/
+	PIN_B0_USB0ID = 10,
+	PIN_B0_U1Rx = 1,
+	PIN_B0_T2CCP0 = 7,
+	PIN_B1_USB0VBUS = 20,
+	PIN_B1_U1Tx = 1,
+	PIN_B1_T2CCP1 = 7,
+	PIN_B2_I2C0SCL = 3,
+	PIN_B2_T3CCP0 = 7,
+	PIN_B3_I2C0SDA = 3,
+	PIN_B3_T3CCP1 = 7,
+	PIN_B4_AIN10 = 20,
+	PIN_B4_SSI2Clk = 2,
+	PIN_B4_M0PWM2 = 4,
+	PIN_B4_T1CCP0 = 7,
+	PIN_B4_CAN0Rx = 8,
+	PIN_B5_AIN11 = 20,
+	PIN_B5_SSI2Fss = 2,
+	PIN_B5_M0PWM3 = 4,
+	PIN_B5_T1CCP1 = 7,
+	PIN_B5_CAN0Tx = 8,
+	PIN_B6_SSI2Rx = 2,
+	PIN_B6_M0PWM0 = 4,
+	PIN_B6_T0CCP0 = 7,
+	PIN_B7_SSI2Tx = 2,
+	PIN_B7_M0PWM1 = 4,
+	PIN_B7_T0CCP1 = 7,
+	/*PORTC*/
+	PIN_C0_TCK_SWCLK = 1,
+	PIN_C0_TMS_T4CCP0 = 7,
+	PIN_C1_TMS_SWDIO = 1,
+	PIN_C1_T4CCP1 = 7,
+	PIN_C2_TDI = 1,
+	PIN_C2_T5CCP0 = 7,
+	PIN_C3_TDO_SWO = 1,
+	PIN_C3_T5CCP1 = 7,
+	PIN_C4_C1_MINUS = 20,
+	PIN_C4_U4Rx = 1,
+	PIN_C4_U1Rx = 2,
+	PIN_C4_M0PWM6 = 4,
+	PIN_C4_IDX1 = 6,
+	PIN_C4_WT0CCP0 = 7,
+	PIN_C4_U1RTS = 8,
+	PIN_C5_C1_PLUS = 20,
+	PIN_C5_U4Tx = 1,
+	PIN_C5_U1Tx =2,
+	PIN_C5_M0PWM7 = 4,
+	PIN_C5_PhA1 = 6,
+	PIN_C5_WT0CCP1 = 7,
+	PIN_C5_U1CTS = 8,
+	PIN_C6_C0_PLUS = 20,
+	PIN_C6_U3Rx = 1,
+	PIN_C6_PhB1 = 6,
+	PIN_C6_WT1CCP0 = 7,
+	PIN_C6_USB0EPEN = 8,
+	PIN_C7_C0_MINUS = 20,
+	PIN_C7_U3Tx = 1,
+	PIN_C7_WT1CCP1 = 7,
+	PIN_C7_USB0PFLT = 8,
+	/*PORTD*/
+	PIN_D0_AIN7 = 20,
+	PIN_D0_SSI3Clk = 1,
+	PIN_D0_SSI1Clk = 2,
+	PIN_D0_I2C3SCL = 3,
+	PIN_D0_M0PWM6 = 4,
+	PIN_D0_M1PWM0 = 5,
+	PIN_D0_WT2CCP0 = 7,
+	PIN_D1_AIN6 = 20,
+	PIN_D1_SSI3Fss = 1,
+	PIN_D1_SSI1Fss = 2,
+	PIN_D1_I2C3SDA = 3,
+	PIN_D1_M0PWM7 = 4,
+	PIN_D1_M1PWM1 = 5,
+	PIN_D1_WT2CCP1 = 7,
+	PIN_D2_AIN5 = 20,
+	PIN_D2_SSI3Rx = 1,
+	PIN_D2_SSI1Rx = 2,
+	PIN_D2_M0FAULT0 = 4,
+	PIN_D2_WT3CCP0 = 7,
+	PIN_D2_USB0EPEN = 8,
+	PIN_D3_AIN4 = 20,
+	PIN_D3_SSI3Tx = 1,
+	PIN_D3_SSI1Tx = 2,
+	PIN_D3_IDX0 = 6,
+	PIN_D3_WT3CCP1 = 7,
+	PIN_D3_USB0PFLT = 8,
+	PIN_D4_USB0DM = 20,
+	PIN_D4_U6Rx = 1,
+	PIN_D4_WT4CCP0 = 7,
+	PIN_D5_USB0DP = 20,
+	PIN_D5_U6Tx = 1,
+	PIN_D5_WT4CCP1 = 7,
+	PIN_D6_U2Rx = 1,
+	PIN_D6_M0FAULT0 = 4,
+	PIN_D6_PhA0 = 6,
+	PIN_D6_WT5CCP0 = 7,
+	PIN_D7_U2Tx = 1,
+	PIN_D7_PhB0 = 6,
+	PIN_D7_WT5CCP1 = 7,
+	PIN_D7_NMI = 8,
+	/*PORTE*/
+	PIN_E0_AIN3 = 20,
+	PIN_E0_U7Rx = 1,
+	PIN_E1_AIN2 = 20,
+	PIN_E1_U7Tx = 1,
+	PIN_E2_AIN1 = 20,
+	PIN_E3_AIN0 = 20,
+	PIN_E4_AIN9 = 20,
+	PIN_E4_U5Rx = 1,
+	PIN_E4_I2C2SCL = 3,
+	PIN_E4_M0PWM4 = 4,
+	PIN_E4_M1PWM2 = 5,
+	PIN_E4_CAN0Rx = 8,
+	PIN_E5_AIN8 = 20,
+	PIN_E5_U5Tx = 1,
+	PIN_E5_I2C2SDA = 3,
+	PIN_E5_M0PWM5 = 4,
+	PIN_E5_M1PWM3 = 5,
+	PIN_E5_CAN0Tx = 8,
+	/*PORTF*/
+	PIN_F0_U1RTS = 1,
+	PIN_F0_SSI1Rx = 2,
+	PIN_F0_CAN0Rx = 3,
+	PIN_F0_M1PWM4 = 5,
+	PIN_F0_PhA0 = 6,
+	PIN_F0_T0CCP0 = 7,
+	PIN_F0_NMI = 8,
+	PIN_F0_C0o = 9,
+	PIN_F1_U1CTS = 1,
+	PIN_F1_SSI1Tx = 2,
+	PIN_F1_M1PWM5 = 5,
+	PIN_F1_PhB0 = 6,
+	PIN_F1_T0CCP1 = 7,
+	PIN_F1_C1o = 9,
+	PIN_F1_TRD1 = 14,
+	PIN_F2_SSI1Clk = 2,
+	PIN_F2_M0FAULT0 = 4,
+	PIN_F2_M1PWM6 = 5,
+	PIN_F2_T1CCP0 = 7,
+	PIN_F2_TRD0 = 14,
+	PIN_F3_SSI1Fss = 2,
+	PIN_F3_CAN0Tx = 3,
+	PIN_F3_M1PWM7 = 5,
+	PIN_F3_T1CCP1 = 7,
+	PIN_F3_TRCLK = 14,
+	PIN_F4_M1FAULT0 = 5,
+	PIN_F4_IDX0 = 6,
+	PIN_F4_T2CCP0 = 7,
+	PIN_F4_USB0EPEN = 8,
+	/*For Any PORT*/
+	PIN_GPIO_MODE = 16,
+	PIN_GPIO_MODE_EXT_LOW_LEVELS = 17,
+	PIN_GPIO_MODE_EXT_HIGH_LEVELS = 18,
+	PIN_GPIO_MODE_EXT_RISING_EDGES = 19,
+	PIN_GPIO_MODE_EXT_FALLING_EDGES = 21,
+	PIN_GPIO_MODE_EXT_BOTH_EDGES = 22,
+}PORT_PIN_MODE_t;
+
+typedef enum PORT_PIN_OUT_CURRENT_t
+{
+	PIN_2mA,
+	PIN_4mA,
+	PIN_8mA,
+	PIN_INVALID_CURRENT
+}PORT_PIN_OUT_CURRENT_t;
+typedef enum PORT_PIN_INTERNAL_CONNECTION_t
+{
+	OPEN_DRAIN,
+	PULL_UP,
+	PULL_DOWN,
+	PIN_INVALID_CONNECTION
+}PORT_PIN_INTERNAL_CONNECTION_t;
+typedef struct PORT_CFG_t
+{
+	PORT_PIN_t PIN;
+	PORT_PIN_MODE_t PIN_MODE;
+	PORT_PIN_LEVEL_t PIN_INITIAL_LEVEL;
+	PORT_PIN_DIR_t PIN_DIRECTION;
+	PORT_PIN_INTERNAL_CONNECTION_t PIN_INTERNAL_CONNECTION;
+	PORT_PIN_OUT_CURRENT_t PIN_CURRENT;
+}PORT_CFG_t;
+//FUNCTIONS PROTOTYPES
+void PORT_Init(PORT_CFG_t*);
+
+#endif
